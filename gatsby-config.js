@@ -15,7 +15,31 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    `gatsby-plugin-styled-components`,
+    `gatsby-plugin-resolve-src`, // Allows to use absolute path
+
+    {
+      resolve: `gatsby-plugin-styled-components`,
+      options: {
+        diplayName: true,
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-eslint',
+      options: {
+        test: /\.js$/,
+        exclude: /(node_modules|.cache|public)/,
+        stages: ['develop'],
+        options: {
+          emitWarning: true,
+          failOnError: false,
+        },
+      },
+    },
+    {
+      resolve: `gatsby-plugin-stylelint`,
+      options: { files: ['**/*.js'] },
+    },
+
     // {
     //   resolve: `gatsby-plugin-manifest`,
     //   options: {
