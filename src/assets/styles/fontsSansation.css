@@ -1,0 +1,23 @@
+/* sansation-regular */
+@font-face {
+  font-family: 'Sansation';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/Sansation_Regular.ttf') format('truetype');
+}
+
+/* sansation-light  */
+@font-face {
+  font-family: 'Sansation';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/Sansation_Light.ttf') format('truetype');
+}
+
+/* sansation-bold  */
+@font-face {
+  font-family: 'Sansation';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/Sansation_Bold.ttf') format('truetype');
+}

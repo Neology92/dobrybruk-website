@@ -1,21 +1,23 @@
 export const theme = {
   color: {
-    nightBlue: '#050A23',
-    darkBlue: '#24306E',
-    lightBlue: '#44548D',
-    darkGrey: '#D9D9D9',
-    grey: '#E5E5E5',
+    darkGreen: '#005526',
+    green: '#337751',
+    lightGreen: '#7BA58E',
+    darkGrey: '#828282',
+    greyL3: '#D3D3D3',
+    greyL2: '#E4E4E4',
+    greyL1: '#F5F5F5',
     white: '#FFFFFF',
-    black: '#000000',
 
     rgb: {
-      nightBlue: '5,10,35',
-      darkBlue: '36,48,110',
-      lightBlue: '68,84,141',
-      darkGrey: '217,217,217',
-      grey: '229,229,229',
+      nightGreen: '0,85,38',
+      green: '51,119,81',
+      lightGreen: '123,165,142',
+      darkGrey: '130,130,130',
+      greyL3: '211,211,211',
+      greyL2: '228,228,228',
+      greyL1: '245,245,245',
       white: '255,255,255',
-      black: '0,0,0',
     },
   },
 
@@ -29,12 +31,7 @@ export const theme = {
 
   font: {
     family: {
-      atma: '"Atma", cursive',
-      roboto: '"Roboto", sans-serif',
-    },
-    weight: {
-      bold: '500',
-      regular: '400',
+      sansation: '"Sansation", sans-serif',
     },
   },
 
