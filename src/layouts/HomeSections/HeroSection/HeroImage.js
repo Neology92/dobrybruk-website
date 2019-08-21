@@ -8,7 +8,7 @@ const HeroImage = () => {
     query {
       file(relativePath: { eq: "heroImage.png" }) {
         childImageSharp {
-          fluid(maxWidth: 852, quality: 100) {
+          fluid(maxWidth: 583, quality: 100) {
             ...GatsbyImageSharpFluid_noBase64
           }
         }
@@ -26,10 +26,26 @@ const HeroImage = () => {
 };
 
 const Wrapper = styled.div`
-  width: 40vw;
+  width: 38vw;
+  max-width: 583px;
   position: absolute;
-  top: 0;
+  top: 40px;
   right: 0;
+
+  ${({ theme }) => theme.media.above.m} {
+    width: 35vw;
+    top: 0;
+  }
+
+  ${({ theme }) => theme.media.above.l} {
+    width: 40vw;
+    top: 0;
+  }
+
+  ${({ theme }) => theme.media.above.xl} {
+    width: 45vw;
+    top: 0;
+  }
 `;
 
 export default HeroImage;

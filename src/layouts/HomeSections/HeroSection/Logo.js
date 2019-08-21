@@ -16,6 +16,10 @@ const StyledImg = styled.img`
     width: 95px;
   }
 
+  ${({ theme }) => theme.media.above.m} {
+    width: 150px;
+  }
+
   ${({ theme }) => theme.media.above.l} {
     width: 200px;
   }
@@ -26,19 +30,19 @@ const StyledImg = styled.img`
 `;
 
 const Wrapper = styled.div`
-  margin: 20px 5%;
+  margin: 90px 0 0 5%;
 
   ${({ theme }) => theme.media.above.s} {
-    margin: 20px 10% 0;
+    margin: 81px 10% 0;
   }
 
   ${({ theme }) => theme.media.above.m} {
-    width: 600px;
-    margin: 86px auto 0;
+    width: 550px;
+    margin: 180px auto 0;
   }
 
   ${({ theme }) => theme.media.above.l} {
-    margin: 80px 0 0 20%;
+    margin: 140px 0 0 20%;
   }
 `;
 
