@@ -16,7 +16,7 @@ const HeroWrapper = styled.section`
     background-image: url(${desktopHeroGrid});
   }
 
-  & div {
+  & div:first-of-type {
     display: flex;
     flex-direction: column;
   }

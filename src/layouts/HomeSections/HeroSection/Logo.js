@@ -10,11 +10,7 @@ const Logo = () => (
 );
 
 const StyledImg = styled.img`
-  width: 85px;
-
-  ${({ theme }) => theme.media.above.s} {
-    width: 95px;
-  }
+  width: 90px;
 
   ${({ theme }) => theme.media.above.m} {
     width: 150px;
@@ -30,10 +26,10 @@ const StyledImg = styled.img`
 `;
 
 const Wrapper = styled.div`
-  margin: 90px 0 0 5%;
+  margin: 85px 0 0 5%;
 
   ${({ theme }) => theme.media.above.s} {
-    margin: 81px 10% 0;
+    margin: 85px 10% 0;
   }
 
   ${({ theme }) => theme.media.above.m} {

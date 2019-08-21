@@ -1,3 +1,4 @@
 TODO:
 
-- logo on hero by gasby query
+- image on hero by gasby query
+- kontakt button overlapped by image

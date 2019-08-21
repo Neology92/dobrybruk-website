@@ -4,18 +4,14 @@ import HeroWrapper from './HeroWrapper';
 import Heading from './Heading';
 import Logo from './Logo';
 import HeroImage from './HeroImage';
+import Buttons from './Buttons';
 
 const HeroSection = () => (
   <HeroWrapper>
     <div>
       <Logo />
       <Heading />
-      {/* 
-        Button 
-        Button
-        
-        Photo - absolute
-      */}
+      <Buttons />
     </div>
     <HeroImage />
   </HeroWrapper>

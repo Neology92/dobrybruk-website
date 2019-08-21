@@ -12,11 +12,12 @@ const Heading = () => (
 );
 
 const Wrapper = styled.div`
-  width: 320px;
+  width: 290px;
   margin: 20px auto;
 
   ${({ theme }) => theme.media.above.s} {
-    margin: 30px auto;
+    width: 320px;
+    margin: 20px auto;
   }
 
   ${({ theme }) => theme.media.above.m} {
@@ -29,7 +30,7 @@ const Wrapper = styled.div`
   }
 `;
 const MainStyledH2 = styled.h2`
-  font-size: 4rem;
+  font-size: 3.8rem;
   font-weight: 500;
   color: ${({ theme }) => theme.color.darkGreen};
   margin: 0 0 35px;
@@ -37,6 +38,7 @@ const MainStyledH2 = styled.h2`
   text-align: left;
 
   ${({ theme }) => theme.media.above.m} {
+    font-size: 4rem;
     margin: 0 0 6px;
   }
 `;
@@ -45,12 +47,13 @@ const SecondStyledH2 = styled(MainStyledH2)`
   margin: 0;
   text-align: right;
   color: ${({ theme }) => theme.color.darkGrey};
-  font-size: 2.7rem;
+  font-size: 2.4rem;
 
   display: flex;
   flex-direction: column;
 
   ${({ theme }) => theme.media.above.m} {
+    font-size: 2.7rem;
     text-align: center;
     flex-direction: row;
     & span {
