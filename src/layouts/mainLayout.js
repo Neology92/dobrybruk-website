@@ -21,7 +21,7 @@ const MainLayout = ({ children }) => (
 );
 
 const StyledMain = styled.main`
-  width: 66vw;
+  width: 100%;
 `;
 
 MainLayout.propTypes = {
