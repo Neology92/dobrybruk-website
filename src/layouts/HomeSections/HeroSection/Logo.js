@@ -1,0 +1,45 @@
+import React from 'react';
+import styled from 'styled-components';
+
+import logo from 'assets/images/logo.png';
+
+const Logo = () => (
+  <Wrapper>
+    <StyledImg src={logo} />
+  </Wrapper>
+);
+
+const StyledImg = styled.img`
+  width: 85px;
+
+  ${({ theme }) => theme.media.above.s} {
+    width: 95px;
+  }
+
+  ${({ theme }) => theme.media.above.l} {
+    width: 200px;
+  }
+
+  ${({ theme }) => theme.media.above.xl} {
+    width: 200px;
+  }
+`;
+
+const Wrapper = styled.div`
+  margin: 20px 5%;
+
+  ${({ theme }) => theme.media.above.s} {
+    margin: 20px 10% 0;
+  }
+
+  ${({ theme }) => theme.media.above.m} {
+    width: 600px;
+    margin: 86px auto 0;
+  }
+
+  ${({ theme }) => theme.media.above.l} {
+    margin: 80px 0 0 20%;
+  }
+`;
+
+export default Logo;
