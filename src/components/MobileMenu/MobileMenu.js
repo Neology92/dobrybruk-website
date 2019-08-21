@@ -12,8 +12,8 @@ const menuItems = [
   { name: 'Oferta', slug: '/' },
 ];
 
-const MobileMenu = ({ className, isOpen }) => (
-  <MenuWrapper className={className} isOpen={isOpen}>
+const MobileMenu = ({ isOpen }) => (
+  <MenuWrapper isOpen={isOpen}>
     <MenuLinksWrapper>
       {menuItems.map(item => (
         <MenuLink isOpen={isOpen} key={item.name}>
@@ -25,7 +25,6 @@ const MobileMenu = ({ className, isOpen }) => (
 );
 
 MobileMenu.propTypes = {
-  className: PropTypes.string.isRequired,
   isOpen: PropTypes.bool.isRequired,
 };
 
