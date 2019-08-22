@@ -11,14 +11,18 @@ const HeroWrapper = styled.section`
   background-image: url(${mobileHeroGrid});
   background-position: center;
 
+  & > div:first-of-type {
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+
   ${({ theme }) => theme.media.above.m} {
     height: 724px;
     background-image: url(${desktopHeroGrid});
-  }
-
-  & div:first-of-type {
-    display: flex;
-    flex-direction: column;
+    & > div:first-of-type {
+      padding-top: 0;
+    }
   }
 `;
 

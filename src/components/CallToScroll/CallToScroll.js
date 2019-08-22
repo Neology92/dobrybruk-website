@@ -5,7 +5,7 @@ const CallToScroll = styled.div`
   height: 100px;
   position: relative;
 
-  background: ${({ color }) => (color ? color : 'white')};
+  background: ${({ bgColor }) => (bgColor ? bgColor : 'white')};
 
   &::after {
     content: '';
@@ -18,7 +18,7 @@ const CallToScroll = styled.div`
     bottom: -20px;
     left: calc(50% - 20px);
 
-    background: ${({ color }) => (color ? color : 'white')};
+    background: ${({ bgColor }) => (bgColor ? bgColor : 'white')};
 
     z-index: 999999;
   }

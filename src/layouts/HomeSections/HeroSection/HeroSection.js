@@ -8,7 +8,6 @@ import Buttons from './Buttons';
 
 const HeroSection = () => (
   <HeroWrapper>
-    <div style={{ height: '10px' }} />
     <div>
       <Logo />
       <Heading />

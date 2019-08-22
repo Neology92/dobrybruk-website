@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { MainLayout, HeroSection, OfferSection } from 'layouts';
+import { MainLayout, HeroSection, OfferSection, GallerySection } from 'layouts';
 import { SEO } from 'components';
 
 const IndexPage = () => (
@@ -8,6 +8,7 @@ const IndexPage = () => (
     <SEO title="Home" />
     <HeroSection />
     <OfferSection />
+    <GallerySection />
   </MainLayout>
 );
 
