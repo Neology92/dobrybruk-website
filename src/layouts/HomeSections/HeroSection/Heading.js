@@ -13,11 +13,11 @@ const Heading = () => (
 
 const Wrapper = styled.div`
   width: 290px;
-  margin: 20px auto;
+  margin: 25px auto;
 
   ${({ theme }) => theme.media.above.s} {
     width: 320px;
-    margin: 20px auto;
+    margin: 25px auto;
   }
 
   ${({ theme }) => theme.media.above.m} {
@@ -33,7 +33,7 @@ const MainStyledH2 = styled.h2`
   font-size: 3.8rem;
   font-weight: 500;
   color: ${({ theme }) => theme.color.darkGreen};
-  margin: 0 0 35px;
+  margin: 0 0 50px;
   padding: 0;
   text-align: left;
 

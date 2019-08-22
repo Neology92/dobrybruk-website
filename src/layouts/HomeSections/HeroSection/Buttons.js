@@ -14,15 +14,15 @@ const Buttons = () => (
 
 const Wrapper = styled.div`
   width: 300px;
-  margin: 35px auto;
+  margin: 50px auto;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 
   ${({ theme }) => theme.media.above.s} {
-    width: 300px;
-    padding: 0 40px 0 0;
+    width: 330px;
+    padding: 0 20px 0 0;
   }
 
   ${({ theme }) => theme.media.above.m} {
@@ -37,6 +37,12 @@ const Wrapper = styled.div`
   }
 
   ${({ theme }) => theme.media.above.xl} {
+    width: 500px;
+    padding: 0 100px 0 0;
+    margin: 30px 0 0 20%;
+  }
+
+  ${({ theme }) => theme.media.above.xxl} {
     width: 600px;
     margin: 30px 0 0 20%;
   }
