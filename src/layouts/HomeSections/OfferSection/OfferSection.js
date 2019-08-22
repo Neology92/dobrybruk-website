@@ -30,7 +30,7 @@ const OfferSection = () => (
       <Product icon={truck}>Transport HDS</Product>
       <Product icon={paving}>Brukarstwo</Product>
     </OfferBlock>
-    <CallToScroll />
+    <CallToScroll color={({ theme }) => theme.color.white} />
   </SectionWrapper>
 );
 
