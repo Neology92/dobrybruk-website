@@ -9,7 +9,7 @@ import pot from 'assets/images/pot.svg';
 import truck from 'assets/images/truck.svg';
 import paving from 'assets/images/paving.svg';
 
-import { Product } from 'components';
+import { Product, CallToScroll } from 'components';
 
 import Heading from './Heading';
 import OfferHeading from './OfferHeading';
@@ -30,6 +30,7 @@ const OfferSection = () => (
       <Product icon={truck}>Transport HDS</Product>
       <Product icon={paving}>Brukarstwo</Product>
     </OfferBlock>
+    <CallToScroll />
   </SectionWrapper>
 );
 
