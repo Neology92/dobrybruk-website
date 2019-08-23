@@ -6,7 +6,7 @@ import 'assets/styles/fontsSansation.css';
 
 import GlobalStyle from 'assets/styles/GlobalStyle';
 import { theme } from 'assets/styles/theme';
-import { Header } from 'components';
+import { Header, Footer } from 'components';
 
 const MainLayout = ({ children }) => (
   <>
@@ -15,6 +15,7 @@ const MainLayout = ({ children }) => (
         <GlobalStyle />
         <Header />
         <StyledMain>{children}</StyledMain>
+        <Footer />
       </>
     </ThemeProvider>
   </>
