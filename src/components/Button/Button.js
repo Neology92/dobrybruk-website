@@ -29,40 +29,56 @@ const ButtonLink = styled(Link)`
   font-family: ${({ theme }) => theme.font.family.sansation};
   font-weight: 500;
   border-radius: 10px;
+
   background: ${({ isTransparent, isWhite, theme }) =>
-    isTransparent
-      ? 'none'
-      : isWhite
-      ? theme.color.greyL2
-      : theme.color.lightGreen};
+    isTransparent ? 'none' : isWhite ? theme.color.white : theme.color.green};
 
   border: ${({ isTransparent, theme }) =>
-    isTransparent ? `1px solid ${theme.color.darkGrey}` : 'none'};
+    isTransparent ? `1px solid ${theme.color.black}` : 'none'};
 
   color: ${({ isTransparent, isWhite, theme }) =>
     isTransparent
-      ? theme.color.darkGrey
+      ? theme.color.black
       : isWhite
-      ? theme.color.lightGreen
+      ? theme.color.darkGreen
       : theme.color.white};
 
-  &:hover {
+  ${({ theme }) => theme.media.above.m} {
     background: ${({ isTransparent, isWhite, theme }) =>
       isTransparent
         ? 'none'
         : isWhite
-        ? theme.color.white
-        : theme.color.darkGreen};
+        ? theme.color.greyL2
+        : theme.color.lightGreen};
 
     border: ${({ isTransparent, theme }) =>
-      isTransparent ? `1px solid ${theme.color.darkGreen}` : 'none'};
+      isTransparent ? `1px solid ${theme.color.darkGrey}` : 'none'};
 
     color: ${({ isTransparent, isWhite, theme }) =>
       isTransparent
-        ? theme.color.darkGreen
+        ? theme.color.darkGrey
         : isWhite
         ? theme.color.darkGreen
         : theme.color.white};
+
+    &:hover {
+      background: ${({ isTransparent, isWhite, theme }) =>
+        isTransparent
+          ? 'none'
+          : isWhite
+          ? theme.color.white
+          : theme.color.darkGreen};
+
+      border: ${({ isTransparent, theme }) =>
+        isTransparent ? `1px solid ${theme.color.darkGreen}` : 'none'};
+
+      color: ${({ isTransparent, isWhite, theme }) =>
+        isTransparent
+          ? theme.color.darkGreen
+          : isWhite
+          ? theme.color.darkGreen
+          : theme.color.white};
+    }
   }
 
   ${({ theme }) => theme.media.above.l} {

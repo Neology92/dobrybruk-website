@@ -15,13 +15,21 @@ const Product = ({ children, icon }) => (
 );
 
 const Text = styled.h4`
-  color: ${({ theme }) => theme.color.lightGreen};
+  color: ${({ theme }) => theme.color.green};
   font-size: 1.5rem;
   font-weight: 500;
   text-align: center;
 
   padding: 0;
   margin: 5px auto 0;
+
+  ${({ theme }) => theme.media.above.m} {
+    color: ${({ theme }) => theme.color.lightGreen};
+
+    &:hover {
+      color: ${({ theme }) => theme.color.darkGreen};
+    }
+  }
 `;
 
 const IconWrapper = styled.div`

@@ -20,7 +20,7 @@ const CallToScroll = styled.div`
 
     background: ${({ bgColor }) => (bgColor ? bgColor : 'white')};
 
-    z-index: 999999;
+    z-index: 9;
   }
 `;
 

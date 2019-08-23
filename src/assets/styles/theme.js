@@ -8,6 +8,7 @@ export const theme = {
     greyL2: '#E4E4E4',
     greyL1: '#F5F5F5',
     white: '#FFFFFF',
+    black: '#000',
 
     rgb: {
       nightGreen: '0,85,38',
@@ -18,6 +19,7 @@ export const theme = {
       greyL2: '228,228,228',
       greyL1: '245,245,245',
       white: '255,255,255',
+      black: '0,0,0',
     },
   },
 
