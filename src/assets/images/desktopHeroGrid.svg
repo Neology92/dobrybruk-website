@@ -5,12 +5,10 @@
 <line x1="0.850586" y1="625.335" x2="1440.24" y2="625.335" stroke="#D3D3D3" stroke-width="0.750124"/>
 <line x1="0.850586" y1="330.858" x2="1440.24" y2="330.858" stroke="#D3D3D3" stroke-width="0.750124"/>
 <line x1="0.850586" y1="429.017" x2="1440.24" y2="429.017" stroke="#D3D3D3" stroke-width="0.750124"/>
-<line x1="131.67" y1="134.915" x2="131.67" y2="36.7562" stroke="#D3D3D3" stroke-width="0.750124"/>
-<line x1="881.35" y1="134.915" x2="881.35" y2="36.7562" stroke="#D3D3D3" stroke-width="0.750124"/>
-<line x1="1256.19" y1="134.915" x2="1256.19" y2="36.7562" stroke="#D3D3D3" stroke-width="0.750124"/>
-<line x1="506.51" y1="134.915" x2="506.51" y2="36.7562" stroke="#D3D3D3" stroke-width="0.750124"/>
-<line x1="131.67" y1="134.915" x2="131.67" y2="36.7562" stroke="#D3D3D3" stroke-width="0.750124"/>
-<line x1="506.51" y1="134.915" x2="506.51" y2="36.7562" stroke="#D3D3D3" stroke-width="0.750124"/>
+<line x1="1014.35" y1="134.915" x2="1014.35" y2="36.7562" stroke="#D3D3D3" stroke-width="0.750124"/>
+<line x1="1389.19" y1="134.915" x2="1389.19" y2="36.7562" stroke="#D3D3D3" stroke-width="0.750124"/>
+<line x1="639.51" y1="134.915" x2="639.51" y2="36.7562" stroke="#D3D3D3" stroke-width="0.750124"/>
+<line x1="264.67" y1="134.915" x2="264.67" y2="36.7562" stroke="#D3D3D3" stroke-width="0.750124"/>
 <line x1="0.475524" y1="233.074" x2="0.47553" y2="134.915" stroke="#D3D3D3" stroke-width="0.750124"/>
 <line x1="750.156" y1="233.074" x2="750.156" y2="134.915" stroke="#D3D3D3" stroke-width="0.750124"/>
 <line x1="1125" y1="233.074" x2="1125" y2="134.915" stroke="#D3D3D3" stroke-width="0.750124"/>
@@ -44,5 +42,5 @@
 <line x1="0.850586" y1="723.494" x2="1440.24" y2="723.494" stroke="#D3D3D3" stroke-width="0.750124"/>
 <line x1="130.92" y1="723.869" x2="130.92" y2="625.71" stroke="#D3D3D3" stroke-width="0.750124"/>
 <line x1="506.51" y1="723.869" x2="506.51" y2="625.71" stroke="#D3D3D3" stroke-width="0.750124"/>
-<rect width="8" height="12" fill="#C4C4C4"/>
+<rect x="1" y="-1.52588e-05" width="23" height="29" fill="#F5F5F5"/>
 </svg>

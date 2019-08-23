@@ -7,6 +7,7 @@ import MenuLinksWrapper from './MenuLinksWrapper';
 import { StyledLink } from './styled';
 
 const menuItems = [
+  { name: 'Home', slug: '/' },
   { name: 'Galeria', slug: '/galeria-inspiracji' },
   { name: 'Kontakt', slug: '/' },
   { name: 'Oferta', slug: '/' },

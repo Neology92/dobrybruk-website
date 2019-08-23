@@ -26,10 +26,10 @@ const StyledImg = styled.img`
 `;
 
 const Wrapper = styled.div`
-  margin: 85px 0 0 5%;
+  margin: 55px 0 0 5%;
 
   ${({ theme }) => theme.media.above.s} {
-    margin: 85px 10% 0;
+    margin: 55px 10% 0;
   }
 
   ${({ theme }) => theme.media.above.m} {

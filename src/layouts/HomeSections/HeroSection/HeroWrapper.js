@@ -18,6 +18,7 @@ const HeroWrapper = styled.section`
   }
 
   ${({ theme }) => theme.media.above.m} {
+    margin-top: -80px;
     height: 724px;
     background-image: url(${desktopHeroGrid});
     & > div:first-of-type {

@@ -1,13 +1,12 @@
-<svg width="360" height="544" viewBox="0 0 360 544" fill="none" xmlns="http://www.w3.org/2000/svg">
-<line x1="-3.27889e-08" y1="150.625" x2="360" y2="150.625" stroke="#D3D3D3" stroke-width="0.750124"/>
-<line x1="-3.27889e-08" y1="248.625" x2="360" y2="248.625" stroke="#D3D3D3" stroke-width="0.750124"/>
-<line x1="-3.27889e-08" y1="444.625" x2="360" y2="444.625" stroke="#D3D3D3" stroke-width="0.750124"/>
-<line x1="-3.27889e-08" y1="542.625" x2="360" y2="542.625" stroke="#D3D3D3" stroke-width="0.750124"/>
-<line x1="-3.27889e-08" y1="346.625" x2="360" y2="346.625" stroke="#D3D3D3" stroke-width="0.750124"/>
-<line x1="100.625" y1="151.159" x2="100.625" y2="53" stroke="#D3D3D3" stroke-width="0.750124"/>
-<line x1="266.625" y1="543.159" x2="266.625" y2="445" stroke="#D3D3D3" stroke-width="0.750124"/>
-<line x1="309.625" y1="249.159" x2="309.625" y2="151" stroke="#D3D3D3" stroke-width="0.750124"/>
-<line x1="179.625" y1="445.159" x2="179.625" y2="347" stroke="#D3D3D3" stroke-width="0.750124"/>
-<line x1="40.6249" y1="347.159" x2="40.6249" y2="249" stroke="#D3D3D3" stroke-width="0.750124"/>
-<rect width="15" height="19" fill="#F5F5F5"/>
+<svg width="360" height="491" viewBox="0 0 360 491" fill="none" xmlns="http://www.w3.org/2000/svg">
+<line x1="-3.27889e-08" y1="97.6249" x2="360" y2="97.6249" stroke="#D3D3D3" stroke-width="0.750124"/>
+<line x1="-3.27889e-08" y1="195.625" x2="360" y2="195.625" stroke="#D3D3D3" stroke-width="0.750124"/>
+<line x1="-3.27889e-08" y1="391.625" x2="360" y2="391.625" stroke="#D3D3D3" stroke-width="0.750124"/>
+<line x1="-3.27889e-08" y1="489.625" x2="360" y2="489.625" stroke="#D3D3D3" stroke-width="0.750124"/>
+<line x1="-3.27889e-08" y1="293.625" x2="360" y2="293.625" stroke="#D3D3D3" stroke-width="0.750124"/>
+<line x1="100.625" y1="98.159" x2="100.625" y2="-7.64371e-06" stroke="#D3D3D3" stroke-width="0.750124"/>
+<line x1="266.625" y1="490.159" x2="266.625" y2="392" stroke="#D3D3D3" stroke-width="0.750124"/>
+<line x1="309.625" y1="196.159" x2="309.625" y2="98" stroke="#D3D3D3" stroke-width="0.750124"/>
+<line x1="179.625" y1="392.159" x2="179.625" y2="294" stroke="#D3D3D3" stroke-width="0.750124"/>
+<line x1="40.6249" y1="294.159" x2="40.6249" y2="196" stroke="#D3D3D3" stroke-width="0.750124"/>
 </svg>

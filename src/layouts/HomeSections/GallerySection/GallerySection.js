@@ -42,7 +42,9 @@ const GallerySection = () => {
       </GallerySectionPhoto>
       <GallerySectionPhoto image={data.photo3}>
         Zajrzyj do naszej galerii
-        <StyledButton isWhite>Zobacz więcej</StyledButton>
+        <StyledButton to="/galeria-inspiracji" isWhite>
+          Zobacz więcej
+        </StyledButton>
       </GallerySectionPhoto>
       <CallToScroll bgColor={({ theme }) => theme.color.green} />
     </SectionWrapper>

@@ -23,7 +23,7 @@ const ContactSection = () => {
             <StyledIcon src={telephone} /> <InfoName>Telefon:</InfoName>
           </div>
           <div>
-            <StyledA>+48 501 435 152</StyledA>
+            <StyledA href="tel:+48501435152">+48 501 435 152</StyledA>
           </div>
         </InfoSection>
 
@@ -32,7 +32,9 @@ const ContactSection = () => {
             <StyledIcon src={mail} /> <InfoName>E-mail:</InfoName>
           </div>
           <div>
-            <StyledA>iwonalegner@gmail.com</StyledA>
+            <StyledA href="mailto:iwonalegner@gmail.com">
+              iwonalegner@gmail.com
+            </StyledA>
           </div>
         </InfoSection>
 

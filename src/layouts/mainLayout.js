@@ -23,6 +23,8 @@ const MainLayout = ({ children }) => (
 
 const StyledMain = styled.main`
   width: 100%;
+  margin-top: 80px;
+  min-height: calc(100vh);
 `;
 
 MainLayout.propTypes = {
