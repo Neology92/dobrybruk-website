@@ -7,6 +7,10 @@ const OfferHeading = styled.h3`
 
   margin: 50px 0 10px 15px;
   padding: 0;
+
+  ${({ theme }) => theme.media.above.l} {
+    margin: 50px 0 10px 45px;
+  }
 `;
 
 export default OfferHeading;

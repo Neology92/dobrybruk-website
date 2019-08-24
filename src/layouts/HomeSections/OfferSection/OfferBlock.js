@@ -9,7 +9,11 @@ const OfferBlock = styled.div`
   display: grid;
 
   grid-template-columns: 1fr 1fr;
-  grid-gap: 30px;
+  grid-gap: 30px 0px;
+
+  ${({ theme }) => theme.media.above.s} {
+    grid-gap: 30px;
+  }
 
   ${({ theme }) => theme.media.above.l} {
     grid-template-columns: 1fr;
@@ -17,10 +21,15 @@ const OfferBlock = styled.div`
 
     grid-gap: 5vw;
     grid-auto-flow: column;
-    padding: 100px 5.5vw;
+    padding: 50px 5vw;
   }
+
   ${({ theme }) => theme.media.above.xl} {
-    padding: 8.5vw 7vw;
+    padding: 100px 5vw;
+  }
+
+  ${({ theme }) => theme.media.above.xxl} {
+    padding: 100px 6vw;
   }
 `;
 

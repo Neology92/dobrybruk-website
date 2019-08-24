@@ -24,8 +24,11 @@ const Wrapper = styled.div`
 
   &::before {
     display: none;
+  }
 
-    ${({ theme }) => theme.media.above.l} {
+  ${({ theme }) => theme.media.above.l} {
+    &::before {
+      display: none;
       display: block;
       content: '';
       width: 2px;
@@ -35,6 +38,17 @@ const Wrapper = styled.div`
       position: absolute;
       top: 30%;
       left: -1px;
+    }
+  }
+  ${({ theme }) => theme.media.above.xl} {
+    & > div {
+      padding-right: 5vw;
+    }
+  }
+
+  ${({ theme }) => theme.media.above.xxl} {
+    & > div {
+      padding-right: 10vw;
     }
   }
 `;

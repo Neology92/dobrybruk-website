@@ -8,7 +8,7 @@ import Icon from '../Icon/Icon';
 const Product = ({ children, icon }) => (
   <IconWrapper>
     <div>
-      <Icon src={icon} />
+      <StyledIcon src={icon} />
     </div>
     <Text>{children}</Text>
   </IconWrapper>
@@ -31,8 +31,12 @@ const Text = styled.h4`
     }
   }
 
-  ${({ theme }) => theme.media.above.l} {
+  ${({ theme }) => theme.media.above.m} {
     font-size: 1.8rem;
+  }
+
+  ${({ theme }) => theme.media.above.xl} {
+    font-size: 2.1rem;
   }
 `;
 
@@ -46,12 +50,50 @@ const IconWrapper = styled.div`
   > div {
     height: 70px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-  }
 
-  ${({ theme }) => theme.media.above.l} {
-    height: 90px;
+    ${({ theme }) => theme.media.above.s} {
+      height: 80px;
+    }
+
+    ${({ theme }) => theme.media.above.m} {
+      height: 80px;
+    }
+
+    ${({ theme }) => theme.media.above.l} {
+      height: 90px;
+    }
+
+    ${({ theme }) => theme.media.above.l} {
+      height: 120px;
+    }
+  }
+`;
+
+const StyledIcon = styled(Icon)`
+  & > svg {
+    height: 72px;
+
+    ${({ theme }) => theme.media.above.s} {
+      height: 77px;
+    }
+
+    ${({ theme }) => theme.media.above.m} {
+      height: 80px;
+    }
+
+    ${({ theme }) => theme.media.above.l} {
+      height: 90px;
+    }
+
+    ${({ theme }) => theme.media.above.xl} {
+      height: 95px;
+    }
+
+    ${({ theme }) => theme.media.above.xxl} {
+      height: 110px;
+    }
   }
 `;
 
