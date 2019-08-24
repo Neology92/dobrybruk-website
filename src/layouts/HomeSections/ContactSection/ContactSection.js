@@ -86,21 +86,18 @@ const InfoSection = styled.div`
     display: flex;
     flex-direction: row;
     align-items: center;
-
-    .desktop {
-      display: none;
-    }
   }
 
+  .desktop {
+    display: none;
+  }
   ${({ theme }) => theme.media.above.m} {
-    & > div {
-      .desktop {
-        display: inherit;
-      }
+    .desktop {
+      display: inherit;
+    }
 
-      .mobile {
-        display: none;
-      }
+    .mobile {
+      display: none;
     }
   }
 `;
