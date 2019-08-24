@@ -77,7 +77,7 @@ const InfoWrapper = styled.div`
 
 const InfoSection = styled.div`
   width: 100%;
-  margin: 90px 0 0;
+  margin: 50px 0 0;
   & > div {
     display: flex;
     flex-direction: row;
