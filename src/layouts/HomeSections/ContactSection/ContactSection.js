@@ -44,7 +44,7 @@ const ContactSection = () => {
             <InfoName>Facebook:</InfoName>
           </div>
           <div>
-            <StyledA className="mobile" href="fb://page/Dobrybruk">
+            <StyledA className="mobile" href="fb://page/460969323954657">
               /Dobrybruk
             </StyledA>
             <StyledA
