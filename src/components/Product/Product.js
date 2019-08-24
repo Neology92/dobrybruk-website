@@ -6,12 +6,12 @@ import styled from 'styled-components';
 import Icon from '../Icon/Icon';
 
 const Product = ({ children, icon }) => (
-  <div>
-    <IconWrapper>
+  <IconWrapper>
+    <div>
       <Icon src={icon} />
-    </IconWrapper>
+    </div>
     <Text>{children}</Text>
-  </div>
+  </IconWrapper>
 );
 
 const Text = styled.h4`
@@ -30,14 +30,29 @@ const Text = styled.h4`
       color: ${({ theme }) => theme.color.darkGreen};
     }
   }
+
+  ${({ theme }) => theme.media.above.l} {
+    font-size: 1.8rem;
+  }
 `;
 
 const IconWrapper = styled.div`
-  height: 70px;
   width: 100%;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
+
+  > div {
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  ${({ theme }) => theme.media.above.l} {
+    height: 90px;
+  }
 `;
 
 Product.propTypes = {

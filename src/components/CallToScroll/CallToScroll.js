@@ -22,6 +22,10 @@ const CallToScroll = styled.div`
 
     z-index: 9;
   }
+
+  ${({ theme }) => theme.media.above.m} {
+    display: none;
+  }
 `;
 
 export default CallToScroll;
