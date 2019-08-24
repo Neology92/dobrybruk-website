@@ -6,7 +6,7 @@ const InfoName = styled.h4`
 
   color: ${({ theme }) => theme.color.darkGrey};
   text-align: left;
-  font-size: 2.4rem;
+  font-size: 2.2rem;
   font-weight: 500;
 `;
 

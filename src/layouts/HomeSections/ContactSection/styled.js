@@ -3,11 +3,11 @@ import styled from 'styled-components';
 import { Icon } from 'components';
 
 const StyledA = styled.a`
-  padding: 8px 0 0 40px;
+  padding: 8px 0 0 38px;
 
   color: ${({ theme }) => theme.color.green};
   text-align: center;
-  font-size: 2.2rem;
+  font-size: 1.8rem;
   font-weight: 500;
 
   text-decoration: underline;
