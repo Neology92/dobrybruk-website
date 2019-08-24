@@ -44,10 +44,14 @@ const ContactSection = () => {
             <InfoName>Facebook:</InfoName>
           </div>
           <div>
+            <StyledA className="mobile" href="fb://page/Dobrybruk">
+              /Dobrybruk
+            </StyledA>
             <StyledA
               href="https://facebook.com/Dobrybruk"
               target="_blank"
               rel="noreferrer noopener"
+              className="desktop"
             >
               /Dobrybruk
             </StyledA>
@@ -82,6 +86,22 @@ const InfoSection = styled.div`
     display: flex;
     flex-direction: row;
     align-items: center;
+
+    .desktop {
+      display: none;
+    }
+  }
+
+  ${({ theme }) => theme.media.above.m} {
+    & > div {
+      .desktop {
+        display: inherit;
+      }
+
+      .mobile {
+        display: none;
+      }
+    }
   }
 `;
 
