@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'gatsby';
 
 import styled from 'styled-components';
 
@@ -18,7 +19,9 @@ const Header = () => {
   return (
     <HeaderWrapper>
       <InnerDiv>
-        <StyledLogo>DobryBruk</StyledLogo>
+        <StyledLogo>
+          <Link to="/">DobryBruk</Link>
+        </StyledLogo>
       </InnerDiv>
       <InnerDiv />
       <InnerDiv>
