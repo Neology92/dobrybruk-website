@@ -14,54 +14,56 @@ import { StyledA, StyledIcon } from './styled';
 
 const ContactSection = () => {
   return (
-    <SectionWrapper>
+    <>
       <Decorations />
-      <ContactHeading>Kontakt</ContactHeading>
-      <InfoWrapper>
-        <ContactSubheading>Iwona Legner</ContactSubheading>
+      <SectionWrapper>
+        <ContactHeading>Kontakt</ContactHeading>
+        <InfoWrapper>
+          <ContactSubheading>Iwona Legner</ContactSubheading>
 
-        <InfoSection>
-          <div>
-            <StyledIcon src={telephone} /> <InfoName>Telefon:</InfoName>
-          </div>
-          <div>
-            <StyledA href="tel:+48501435152">+48 501 435 152</StyledA>
-          </div>
-        </InfoSection>
+          <InfoSection>
+            <div>
+              <StyledIcon src={telephone} /> <InfoName>Telefon:</InfoName>
+            </div>
+            <div>
+              <StyledA href="tel:+48501435152">+48 501 435 152</StyledA>
+            </div>
+          </InfoSection>
 
-        <InfoSection>
-          <div>
-            <StyledIcon src={mail} /> <InfoName>E-mail:</InfoName>
-          </div>
-          <div>
-            <StyledA href="mailto:iwonalegner@gmail.com">
-              iwonalegner@gmail.com
-            </StyledA>
-          </div>
-        </InfoSection>
+          <InfoSection>
+            <div>
+              <StyledIcon src={mail} /> <InfoName>E-mail:</InfoName>
+            </div>
+            <div>
+              <StyledA href="mailto:iwonalegner@gmail.com">
+                iwonalegner@gmail.com
+              </StyledA>
+            </div>
+          </InfoSection>
 
-        <InfoSection>
-          <div>
-            <StyledIcon src={fb} />
-            <InfoName>Facebook:</InfoName>
-          </div>
-          <div>
-            <StyledA className="mobile" href="fb://page/460969323954657">
-              /Dobrybruk
-            </StyledA>
-            <StyledA
-              href="https://facebook.com/Dobrybruk"
-              target="_blank"
-              rel="noreferrer noopener"
-              className="desktop"
-            >
-              /Dobrybruk
-            </StyledA>
-          </div>
-        </InfoSection>
-        <Addres />
-      </InfoWrapper>
-    </SectionWrapper>
+          <InfoSection>
+            <div>
+              <StyledIcon src={fb} />
+              <InfoName>Facebook:</InfoName>
+            </div>
+            <div>
+              <StyledA className="mobile" href="fb://page/460969323954657">
+                /Dobrybruk
+              </StyledA>
+              <StyledA
+                href="https://facebook.com/Dobrybruk"
+                target="_blank"
+                rel="noreferrer noopener"
+                className="desktop"
+              >
+                /Dobrybruk
+              </StyledA>
+            </div>
+          </InfoSection>
+          <Addres />
+        </InfoWrapper>
+      </SectionWrapper>
+    </>
   );
 };
 
