@@ -37,8 +37,8 @@ const GallerySection = () => {
       <GallerySectionPhoto image={data.photo1}>
         Szukasz inspiracji?
       </GallerySectionPhoto>
-      <GallerySectionPhoto image={data.photo2}>
-        Potrzebujesz ożywienia twórczego
+      <GallerySectionPhoto image={data.photo2} isLeft>
+        Potrzebujesz ożywienia twórczego?
       </GallerySectionPhoto>
       <GallerySectionPhoto image={data.photo3}>
         Zajrzyj do naszej galerii
@@ -55,6 +55,25 @@ const SectionWrapper = styled.section`
   min-height: 100px;
 
   background: ${({ theme }) => theme.color.green};
+
+  ${({ theme }) => theme.media.above.l} {
+    padding: 0 0 70px 0;
+
+    position: relative;
+    & ::before {
+      content: '';
+      width: 80px;
+      height: 80px;
+      background: ${({ theme }) => theme.color.greyL2};
+      transform: rotate(45deg);
+
+      position: absolute;
+      top: -40px;
+      left: calc(50% - 40px);
+
+      z-index: 9;
+    }
+  }
 `;
 
 export default GallerySection;
