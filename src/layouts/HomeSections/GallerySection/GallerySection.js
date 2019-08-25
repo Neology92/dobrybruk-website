@@ -11,21 +11,21 @@ const GallerySection = () => {
       photo1: file(relativePath: { eq: "inspirationPhoto1.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1920, quality: 100) {
-            ...GatsbyImageSharpFluid_noBase64
+            ...GatsbyImageSharpFluid
           }
         }
       }
       photo2: file(relativePath: { eq: "inspirationPhoto2.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1920, quality: 100) {
-            ...GatsbyImageSharpFluid_noBase64
+            ...GatsbyImageSharpFluid
           }
         }
       }
       photo3: file(relativePath: { eq: "inspirationPhoto3.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1920, quality: 100) {
-            ...GatsbyImageSharpFluid_noBase64
+            ...GatsbyImageSharpFluid
           }
         }
       }
