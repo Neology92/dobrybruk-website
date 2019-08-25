@@ -20,7 +20,7 @@ const Header = () => {
     <HeaderWrapper>
       <InnerDiv>
         <StyledLogo>
-          <Link to="/">DobryBruk</Link>
+          <Link to="/#hero">DobryBruk</Link>
         </StyledLogo>
       </InnerDiv>
       <InnerDiv />

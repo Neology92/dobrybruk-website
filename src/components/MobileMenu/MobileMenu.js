@@ -7,10 +7,10 @@ import MenuLinksWrapper from './MenuLinksWrapper';
 import { StyledLink } from './styled';
 
 const menuItems = [
-  { name: 'Home', slug: '/' },
+  { name: 'Home', slug: '/#hero' },
   { name: 'Galeria', slug: '/galeria-inspiracji' },
-  { name: 'Kontakt', slug: '/' },
-  { name: 'Oferta', slug: '/' },
+  { name: 'Kontakt', slug: '/#contact' },
+  { name: 'Oferta', slug: '/#offer' },
 ];
 
 const MobileMenu = ({ isOpen }) => (

@@ -5,8 +5,8 @@ import { Button } from 'components';
 
 const Buttons = () => (
   <Wrapper>
-    <Button to="/">Poznaj ofertę</Button>
-    <Button to="/" isTransparent>
+    <Button to="/#offer">Poznaj ofertę</Button>
+    <Button to="/#contact" isTransparent>
       Kontakt
     </Button>
   </Wrapper>

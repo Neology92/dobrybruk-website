@@ -8,6 +8,11 @@ import GlobalStyle from 'assets/styles/GlobalStyle';
 import { theme } from 'assets/styles/theme';
 import { Header, Footer } from 'components';
 
+if (typeof window !== 'undefined') {
+  // eslint-disable-next-line global-require
+  require('smooth-scroll')('a[href*="#"]');
+}
+
 const MainLayout = ({ children }) => (
   <>
     <ThemeProvider theme={theme}>
