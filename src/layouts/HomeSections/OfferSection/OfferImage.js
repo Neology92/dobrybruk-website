@@ -9,7 +9,7 @@ const OfferImage = () => {
       file(relativePath: { eq: "offerSectionImage.png" }) {
         childImageSharp {
           fluid(maxWidth: 532, quality: 100) {
-            ...GatsbyImageSharpFluid_noBase64
+            ...GatsbyImageSharpFluid
           }
         }
       }
