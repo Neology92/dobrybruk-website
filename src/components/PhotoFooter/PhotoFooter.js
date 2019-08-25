@@ -61,6 +61,7 @@ const Wrapper = styled.div`
     justify-content: flex-start;
     align-items: center;
 
+    overflow: hidden;
     > * {
       flex-shrink: 0;
     }

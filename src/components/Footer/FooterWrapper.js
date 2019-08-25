@@ -12,6 +12,11 @@ const FooterWrapper = styled.footer`
   align-items: center;
 
   background: ${({ theme }) => theme.color.darkGreen};
+
+  ${({ theme }) => theme.media.above.m} {
+    padding: 25px;
+    flex-direction: row-reverse;
+  }
 `;
 
 export default FooterWrapper;

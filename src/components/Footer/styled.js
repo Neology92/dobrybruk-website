@@ -7,6 +7,17 @@ const StyledLink = styled(Link)`
 
   color: ${({ theme }) => theme.color.white};
   font-size: 1.2rem;
+
+  ${({ theme }) => theme.media.above.m} {
+    text-decoration: none;
+    padding: 5px 0 0;
+
+    color: ${({ theme }) => theme.color.greyL3};
+
+    & :hover {
+      color: ${({ theme }) => theme.color.white};
+    }
+  }
 `;
 
 export { StyledLink };
