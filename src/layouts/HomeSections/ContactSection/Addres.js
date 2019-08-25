@@ -2,8 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import pin from 'assets/images/pin.svg';
-import { Icon } from 'components';
-import Map from './Map';
+import { Icon, Map } from 'components';
 import { StyledButton } from './styled';
 
 const Addres = () => (

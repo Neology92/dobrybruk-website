@@ -6,7 +6,7 @@ const Map = () => {
 };
 
 const MapWrapper = styled.div`
-  background: red;
+  background: ${({ theme }) => theme.color.greyL3};
   width: 60%;
 `;
 
