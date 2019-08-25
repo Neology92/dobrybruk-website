@@ -8,6 +8,10 @@ const InfoName = styled.h4`
   text-align: left;
   font-size: 2.2rem;
   font-weight: 500;
+
+  ${({ theme }) => theme.media.above.m} {
+    font-size: 2.7rem;
+  }
 `;
 
 export default InfoName;

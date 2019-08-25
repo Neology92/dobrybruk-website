@@ -9,11 +9,13 @@ import ContactHeading from './ContactHeading';
 import ContactSubheading from './ContactSubheading';
 import InfoName from './InfoName';
 import Addres from './Addres';
+import Decorations from './Decorations';
 import { StyledA, StyledIcon } from './styled';
 
 const ContactSection = () => {
   return (
     <SectionWrapper>
+      <Decorations />
       <ContactHeading>Kontakt</ContactHeading>
       <InfoWrapper>
         <ContactSubheading>Iwona Legner</ContactSubheading>
@@ -64,9 +66,27 @@ const ContactSection = () => {
 };
 
 const SectionWrapper = styled.section`
+  overflow: hidden;
+
   width: 100%;
   padding: 80px 0 50px;
   background: ${({ theme }) => theme.color.greyL2};
+
+  ${({ theme }) => theme.media.above.m} {
+    padding: 150px 0 80px;
+    > div {
+      width: 80%;
+      margin: 0 0 0 auto;
+      padding: 0;
+    }
+  }
+
+  ${({ theme }) => theme.media.above.l} {
+    padding: 150px 0 50px;
+    > div {
+      width: 66%;
+    }
+  }
 `;
 
 const InfoWrapper = styled.div`
@@ -77,11 +97,16 @@ const InfoWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  ${({ theme }) => theme.media.above.m} {
+    align-items: flex-end;
+  }
 `;
 
 const InfoSection = styled.div`
-  width: 100%;
-  margin: 40px 0 0;
+  width: 220px;
+  margin: 40px auto 0;
+
   & > div {
     display: flex;
     flex-direction: row;
@@ -91,7 +116,15 @@ const InfoSection = styled.div`
   .desktop {
     display: none;
   }
+
   ${({ theme }) => theme.media.above.m} {
+    width: 90%;
+    margin: 5px 0;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
     .desktop {
       display: inherit;
     }

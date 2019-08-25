@@ -2,28 +2,49 @@ import React from 'react';
 import styled from 'styled-components';
 
 import pin from 'assets/images/pin.svg';
-import { Icon, Button } from 'components';
+import { Icon } from 'components';
+import Map from './Map';
+import { StyledButton } from './styled';
 
 const Addres = () => (
   <Wrapper>
-    <Icon src={pin} />
-    <div>Karwiniec 22c</div>
-    <div>56-420 Bierutów</div>
-    <Button
-      to="https://www.google.com/maps/place/DobryBruk.pl+%7C+Kostka+Brukowa+IWONA+LEGNER/@51.112427,17.5389322,17z/data=!3m1!4b1!4m5!3m4!1s0x4710196655d3496d:0x6ca99ccf33df16a6!8m2!3d51.112427!4d17.5411209"
-      isOutsideLink
-      isWhite
-    >
-      Pokaż na mapie
-    </Button>
+    <Map />
+    <InnerWrapper>
+      <Icon src={pin} />
+      <div>Karwiniec 22c</div>
+      <div>56-420 Bierutów</div>
+      <StyledButton
+        to="https://www.google.com/maps/place/DobryBruk.pl+%7C+Kostka+Brukowa+IWONA+LEGNER/@51.112427,17.5389322,17z/data=!3m1!4b1!4m5!3m4!1s0x4710196655d3496d:0x6ca99ccf33df16a6!8m2!3d51.112427!4d17.5411209"
+        isOutsideLink
+        isWhite
+      >
+        Pokaż na mapie
+      </StyledButton>
+    </InnerWrapper>
   </Wrapper>
 );
 
 const Wrapper = styled.div`
-  padding: 60px 40px;
+  width: 90%;
   margin: 60px 0 0;
-
+  padding: 10px;
   background: ${({ theme }) => theme.color.green};
+
+  ${({ theme }) => theme.media.above.s} {
+    width: 70%;
+    margin: 100px 0 0;
+  }
+
+  ${({ theme }) => theme.media.above.m} {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+`;
+
+const InnerWrapper = styled.div`
+  padding: 50px 30px;
+  flex-grow: 1;
 
   display: flex;
   flex-direction: column;
@@ -44,6 +65,18 @@ const Wrapper = styled.div`
 
   a {
     margin-top: 30px;
+  }
+
+  ${({ theme }) => theme.media.above.m} {
+    padding: 70px 30px;
+  }
+
+  ${({ theme }) => theme.media.above.l} {
+    padding: 90px 30px;
+  }
+
+  ${({ theme }) => theme.media.above.xl} {
+    padding: 120px 30px;
   }
 `;
 
