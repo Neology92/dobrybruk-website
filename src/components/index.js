@@ -7,6 +7,7 @@ import CallToScroll from './CallToScroll/CallToScroll';
 import GallerySectionPhoto from './GallerySectionPhoto/GallerySectionPhoto';
 import Footer from './Footer/Footer';
 import Map from './Map/Map';
+import PhotoFooter from './PhotoFooter/PhotoFooter';
 
 export {
   SEO,
@@ -18,4 +19,5 @@ export {
   GallerySectionPhoto,
   Footer,
   Map,
+  PhotoFooter,
 };

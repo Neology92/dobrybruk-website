@@ -7,7 +7,7 @@ import {
   GallerySection,
   ContactSection,
 } from 'layouts';
-import { SEO } from 'components';
+import { SEO, PhotoFooter } from 'components';
 
 const IndexPage = () => (
   <MainLayout>
@@ -16,6 +16,7 @@ const IndexPage = () => (
     <OfferSection />
     <GallerySection />
     <ContactSection />
+    <PhotoFooter />
   </MainLayout>
 );
 

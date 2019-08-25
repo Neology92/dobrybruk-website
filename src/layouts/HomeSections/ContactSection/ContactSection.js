@@ -84,7 +84,7 @@ const SectionWrapper = styled.section`
   }
 
   ${({ theme }) => theme.media.above.l} {
-    padding: 150px 0 50px;
+    padding: 150px 0 100px;
     > div {
       width: 66%;
     }
