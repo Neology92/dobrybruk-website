@@ -22,8 +22,8 @@ const Pin = styled.div`
   background: ${({ theme }) => theme.color.red};
   position: absolute;
   transform: rotate(-45deg);
-  left: 50%;
-  top: 50%;
+  left: 0;
+  top: -15px;
   margin: -20px 0 0 -20px;
 
   &:after {
@@ -43,8 +43,8 @@ const Pulse = styled.div`
   height: 14px;
   width: 14px;
   position: absolute;
-  left: 50%;
-  top: 50%;
+  left: 0;
+  top: -15px;
   margin: 11px 0px 0px -12px;
   transform: rotateX(55deg);
   z-index: -2;
@@ -67,7 +67,7 @@ const Pulse = styled.div`
 
 const Text = styled.h2`
   position: absolute;
-  top: -70px;
+  top: -85px;
   left: -52px;
   font-size: 1.5rem;
   color: ${({ theme }) => theme.color.white};
