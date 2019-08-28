@@ -4,12 +4,13 @@ import styled from 'styled-components';
 
 import { pulsate } from 'assets/styles/keyframes';
 
-const Marker = ({ text }) => {
+const Marker = ({ text, zoom }) => {
+  // console.log(zoom);
   return (
     <>
       <Pin />
       <Pulse pulsate={pulsate} />
-      <Text>{text}</Text>
+      {zoom > 15 && <Text>{text}</Text>}
     </>
   );
 };
@@ -82,6 +83,7 @@ const Text = styled.h2`
 
 Marker.propTypes = {
   text: PropTypes.string.isRequired,
+  zoom: PropTypes.number.isRequired,
 };
 
 export default Marker;

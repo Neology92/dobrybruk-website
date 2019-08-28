@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-const CityName = ({ name }) => <Name>{name}</Name>;
+const CityName = ({ name, zoom }) => <>{zoom > 15 && <Name>{name}</Name>}</>;
 
 const Name = styled.h3`
   font-size: 2rem;
@@ -13,6 +13,7 @@ const Name = styled.h3`
 
 CityName.propTypes = {
   name: PropTypes.string.isRequired,
+  zoom: PropTypes.number.isRequired,
 };
 
 export default CityName;
