@@ -11,3 +11,23 @@ export const lazyLoad = keyframes`
         }
 
 `;
+
+export const pulsate = keyframes`
+    0% {
+  
+      transform: scale(0.1, 0.1);
+      opacity: 0;
+      filter: alpha(opacity=0);
+    }
+
+    50% {
+      opacity: 1;
+      filter: none;
+    }
+
+    100% {
+  
+      opacity: 0;
+      filter: alpha(opacity=0);
+    }
+  `;

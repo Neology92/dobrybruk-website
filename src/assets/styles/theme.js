@@ -9,6 +9,7 @@ export const theme = {
     greyL1: '#F5F5F5',
     white: '#FFFFFF',
     black: '#000',
+    red: '#b15555',
 
     rgb: {
       nightGreen: '0,85,38',

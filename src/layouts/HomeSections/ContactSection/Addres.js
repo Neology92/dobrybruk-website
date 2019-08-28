@@ -7,7 +7,10 @@ import { StyledButton } from './styled';
 
 const Addres = () => (
   <Wrapper>
-    <Map />
+    <Map
+      address={{ lat: 51.11242713334476, lng: 17.541121244430542 }}
+      googleMapsApiKey="AIzaSyA81c-s9eSyUzOBMTdeeJ5RUbEzXzFLABQ"
+    />
     <InnerWrapper>
       <Icon src={pin} />
       <div>Karwiniec 22c</div>
