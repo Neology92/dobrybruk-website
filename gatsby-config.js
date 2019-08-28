@@ -39,7 +39,13 @@ module.exports = {
       resolve: `gatsby-plugin-stylelint`,
       options: { files: ['**/*.js'] },
     },
-
+    {
+      resolve: 'gatsby-source-googlemaps-geocoding',
+      options: {
+        key: 'AIzaSyA81c-s9eSyUzOBMTdeeJ5RUbEzXzFLABQ',
+        address: 'Karwiniec 22c, 56-420 Bierutów',
+      },
+    },
     //
     //   resolve: `gatsby-plugin-manifest`,
     //   options:
