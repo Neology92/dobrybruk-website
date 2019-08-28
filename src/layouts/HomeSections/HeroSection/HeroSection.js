@@ -7,7 +7,7 @@ import HeroImage from './HeroImage';
 import Buttons from './Buttons';
 
 const HeroSection = () => (
-  <HeroWrapper id="hero">
+  <HeroWrapper id="home">
     <div>
       <Logo />
       <Heading />

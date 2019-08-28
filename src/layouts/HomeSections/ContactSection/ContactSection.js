@@ -16,7 +16,7 @@ const ContactSection = () => {
   return (
     <>
       <Decorations />
-      <SectionWrapper id="contact">
+      <SectionWrapper id="kontakt">
         <ContactHeading>Kontakt</ContactHeading>
         <InfoWrapper>
           <ContactSubheading>Iwona Legner</ContactSubheading>

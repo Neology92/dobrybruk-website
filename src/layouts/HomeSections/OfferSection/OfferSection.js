@@ -9,7 +9,7 @@ import Services from './Services';
 import OfferImage from './OfferImage';
 
 const OfferSection = () => (
-  <SectionWrapper id="offer">
+  <SectionWrapper id="oferta">
     <LeftWrapper>
       <OfferImage />
     </LeftWrapper>

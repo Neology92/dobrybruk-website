@@ -69,7 +69,7 @@ const ButtonLink = styled(Link)`
         ? 'none'
         : isWhite
         ? theme.color.greyL2
-        : theme.color.lightGreen};
+        : `rgb(${theme.color.rgb.green}, 0.9)`};
 
     border: ${({ isTransparent, theme }) =>
       isTransparent ? `1px solid ${theme.color.darkGrey}` : 'none'};
@@ -81,13 +81,16 @@ const ButtonLink = styled(Link)`
         ? theme.color.darkGreen
         : theme.color.white};
 
+    transition: background 0.2s ease-in-out, border 0.2s ease-in-out,
+      color 0.2s ease-in-out;
+
     &:hover {
       background: ${({ isTransparent, isWhite, theme }) =>
         isTransparent
           ? 'none'
           : isWhite
           ? theme.color.white
-          : theme.color.darkGreen};
+          : theme.color.green};
 
       border: ${({ isTransparent, theme }) =>
         isTransparent ? `1px solid ${theme.color.darkGreen}` : 'none'};
