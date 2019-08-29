@@ -17,6 +17,8 @@ const Flex = styled.div`
   height: 68%;
   width: 100%;
 
+  overflow: hidden;
+
   display: flex;
   flex-direction: row;
 `;

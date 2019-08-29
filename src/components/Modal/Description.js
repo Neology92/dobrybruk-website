@@ -7,8 +7,11 @@ import Icon from '../Icon/Icon';
 const Description = ({ children, icon }) => {
   return (
     <Wrapper>
-      <Icon src={icon} />
-      {children}
+      <Stripe>
+        <StyledIcon src={icon} />
+        Dostępne u nas:
+      </Stripe>
+      <ChildrenWrapper>{children}</ChildrenWrapper>
     </Wrapper>
   );
 };
@@ -18,7 +21,64 @@ const Wrapper = styled.section`
   height: calc(100% - 20px);
   margin: 10px;
 
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+
   background: ${({ theme }) => theme.color.greyL2};
+`;
+
+const ChildrenWrapper = styled.div`
+  height: 70%;
+  width: calc(100% - 20px);
+
+  margin: 10px;
+
+  background: red;
+`;
+
+const StyledIcon = styled(Icon)`
+  position: absolute;
+  top: -50px;
+  left: 30px;
+
+  svg {
+    width: 100px;
+  }
+
+  ${({ theme }) => theme.media.above.xxl} {
+    svg {
+      width: 120px;
+    }
+  }
+
+  ${({ theme }) => theme.media.above.xxxl} {
+    svg {
+      width: 160px;
+    }
+  }
+`;
+
+const Stripe = styled.header`
+  width: 70%;
+  height: 13%;
+  padding: 0 40px 0 0;
+
+  background: ${({ theme }) => theme.color.green};
+  position: absolute;
+  left: -10px;
+  top: 10%;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  font-size: 2rem;
+  font-weight: 500;
+  color: ${({ theme }) => theme.color.white};
 `;
 
 Description.propTypes = {
