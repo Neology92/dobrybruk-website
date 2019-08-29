@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 const Text = styled.h4`
+  color: ${({ theme }) => theme.color.green};
   font-size: 1.5rem;
   font-weight: 500;
   text-align: center;

@@ -12,7 +12,7 @@ export const theme = {
     red: '#b15555',
 
     rgb: {
-      nightGreen: '0,85,38',
+      darkGreen: '0,85,38',
       green: '51,119,81',
       lightGreen: '123,165,142',
       darkGrey: '130,130,130',

@@ -4,7 +4,6 @@ const IconWrapper = styled.button`
   padding: 0;
   background: none;
   border: none;
-  cursor: pointer;
 
   width: 100%;
   display: flex;
@@ -38,7 +37,9 @@ const IconWrapper = styled.button`
     }
   }
 
-  ${({ theme }) => theme.media.above.m} {
+  ${({ theme }) => theme.media.above.l} {
+    cursor: pointer;
+
     h4 {
       color: ${({ theme }) => theme.color.lightGreen};
     }
