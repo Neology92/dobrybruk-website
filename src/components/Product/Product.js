@@ -10,7 +10,7 @@ import IconWrapper from './IconWrapper';
 import Text from './Text';
 import { StyledIcon } from './styled';
 
-const Product = ({ children, icon }) => {
+const Product = ({ children, icon, name, photo1, photo2 }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const modalRef = useRef(null);
 
@@ -30,12 +30,14 @@ const Product = ({ children, icon }) => {
         <div>
           <StyledIcon src={icon} />
         </div>
-        <Text>{children}</Text>
+        <Text>{name}</Text>
       </IconWrapper>
 
       <Shutter isModalOpen={isModalOpen} />
       <PopUp isModalOpen={isModalOpen} ref={modalRef}>
-        <Modal />
+        <Modal name={name} icon={icon} photo1={photo1} photo2={photo2}>
+          {children}
+        </Modal>
       </PopUp>
     </>
   );
@@ -61,6 +63,9 @@ const Shutter = styled.div`
 Product.propTypes = {
   children: PropTypes.node.isRequired,
   icon: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  photo1: PropTypes.string.isRequired,
+  photo2: PropTypes.string.isRequired,
 };
 
 export default Product;
