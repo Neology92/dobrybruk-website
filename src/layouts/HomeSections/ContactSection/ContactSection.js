@@ -105,9 +105,11 @@ const InfoWrapper = styled.div`
   }
 `;
 
-const InfoSection = styled.div`
+const InfoSection = styled.address`
   width: 220px;
   margin: 40px auto 0;
+
+  font-style: normal;
 
   & > div {
     display: flex;
