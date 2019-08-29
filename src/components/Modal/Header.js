@@ -3,7 +3,7 @@ import Img from 'gatsby-image';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-const Header = ({ name, photo1, photo2 }) => {
+const Header = ({ name, photo1, photo2, setIsModalOpen }) => {
   return (
     <Wrapper>
       <div>
@@ -14,6 +14,13 @@ const Header = ({ name, photo1, photo2 }) => {
         <Img fluid={photo2} />
       </div>
       <Title>{name}</Title>
+      <CloseButton
+        onClick={() => {
+          setIsModalOpen(false);
+        }}
+      >
+        <CloseIcon />
+      </CloseButton>
     </Wrapper>
   );
 };
@@ -47,6 +54,8 @@ const Title = styled.h2`
 
   font-size: 2rem;
   text-align: center;
+  color: ${({ theme }) => theme.color.darkGreen};
+  font-weight: 500;
 
   ${({ theme }) => theme.media.above.xl} {
     font-size: 2.2rem;
@@ -54,6 +63,10 @@ const Title = styled.h2`
 
   ${({ theme }) => theme.media.above.xxl} {
     font-size: 2.4rem;
+  }
+
+  ${({ theme }) => theme.media.above.xxxl} {
+    font-size: 2.7rem;
   }
 `;
 
@@ -77,10 +90,48 @@ const Wrapper = styled.header`
   }
 `;
 
+const CloseButton = styled.button`
+  width: 30px;
+  height: 30px;
+  border: none;
+  background: transparent;
+
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  cursor: pointer;
+`;
+
+const CloseIcon = styled.div`
+  width: 30px;
+  height: 3px;
+
+  background: ${({ theme }) => theme.color.darkGrey};
+
+  transform: rotate(45deg);
+  position: absolute;
+  top: 13px;
+  right: 0px;
+
+  &::after {
+    content: '';
+    width: 30px;
+    height: 3px;
+
+    background: ${({ theme }) => theme.color.darkGrey};
+    border: none;
+    transform: rotate(90deg);
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+`;
+
 Header.propTypes = {
   name: PropTypes.string.isRequired,
   photo1: PropTypes.string.isRequired,
   photo2: PropTypes.string.isRequired,
+  setIsModalOpen: PropTypes.func.isRequired,
 };
 
 export default Header;

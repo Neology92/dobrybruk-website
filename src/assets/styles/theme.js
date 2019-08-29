@@ -40,6 +40,7 @@ export const theme = {
 
   media: {
     above: {
+      xxxl: '@media (min-width: 1700px)',
       xxl: '@media (min-width: 1440px)',
       xl: '@media (min-width: 1200px)',
       l: '@media (min-width: 992px)',

@@ -35,7 +35,13 @@ const Product = ({ children, icon, name, photo1, photo2 }) => {
 
       <Shutter isModalOpen={isModalOpen} />
       <PopUp isModalOpen={isModalOpen} ref={modalRef}>
-        <Modal name={name} icon={icon} photo1={photo1} photo2={photo2}>
+        <Modal
+          name={name}
+          icon={icon}
+          photo1={photo1}
+          photo2={photo2}
+          setIsModalOpen={setIsModalOpen}
+        >
           {children}
         </Modal>
       </PopUp>
