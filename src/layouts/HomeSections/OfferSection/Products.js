@@ -98,7 +98,7 @@ const Products = () => {
         </Product>
         <Product
           icon={aggregate}
-          name="Kruszywa"
+          name="Kruszywa, kamienie"
           photo1={data.aggregatePhoto1.childImageSharp.fluid}
           photo2={data.aggregatePhoto2.childImageSharp.fluid}
         >

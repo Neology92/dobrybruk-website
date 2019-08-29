@@ -62,7 +62,7 @@ const Title = styled.h2`
   }
 
   ${({ theme }) => theme.media.above.xxl} {
-    font-size: 2.4rem;
+    font-size: 2.3rem;
   }
 
   ${({ theme }) => theme.media.above.xxxl} {
@@ -129,8 +129,8 @@ const CloseIcon = styled.div`
 
 Header.propTypes = {
   name: PropTypes.string.isRequired,
-  photo1: PropTypes.string.isRequired,
-  photo2: PropTypes.string.isRequired,
+  photo1: PropTypes.object.isRequired,
+  photo2: PropTypes.object.isRequired,
   setIsModalOpen: PropTypes.func.isRequired,
 };
 

@@ -35,8 +35,8 @@ Modal.propTypes = {
   children: PropTypes.node.isRequired,
   icon: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
-  photo1: PropTypes.string.isRequired,
-  photo2: PropTypes.string.isRequired,
+  photo1: PropTypes.object.isRequired,
+  photo2: PropTypes.object.isRequired,
   setIsModalOpen: PropTypes.func.isRequired,
 };
 

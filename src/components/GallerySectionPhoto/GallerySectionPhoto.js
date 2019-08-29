@@ -57,7 +57,7 @@ const Wrapper = styled.div`
 
 GallerySectionPhoto.propTypes = {
   children: PropTypes.node.isRequired,
-  image: PropTypes.node.isRequired,
+  image: PropTypes.object.isRequired,
   isLeft: PropTypes.bool,
 };
 
