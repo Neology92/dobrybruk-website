@@ -11,6 +11,8 @@ const Button = ({
   children,
   className,
   isOutsideLink,
+  rel,
+  target,
 }) => {
   return (
     <>
@@ -20,6 +22,8 @@ const Button = ({
           className={className}
           isTransparent={isTransparent}
           isWhite={isWhite}
+          rel={rel}
+          target={target}
         >
           {children}
         </ButtonA>
@@ -29,6 +33,8 @@ const Button = ({
           className={className}
           isTransparent={isTransparent}
           isWhite={isWhite}
+          rel={rel}
+          target={target}
         >
           {children}
         </ButtonLink>
@@ -111,7 +117,6 @@ const ButtonLink = styled(Link)`
     width: 200px;
   }
 `;
-
 const ButtonA = styled.a`
   text-decoration: none;
   padding: 0;
@@ -144,7 +149,7 @@ const ButtonA = styled.a`
         ? 'none'
         : isWhite
         ? theme.color.greyL2
-        : theme.color.lightGreen};
+        : `rgb(${theme.color.rgb.green}, 0.9)`};
 
     border: ${({ isTransparent, theme }) =>
       isTransparent ? `1px solid ${theme.color.darkGrey}` : 'none'};
@@ -156,13 +161,16 @@ const ButtonA = styled.a`
         ? theme.color.darkGreen
         : theme.color.white};
 
+    transition: background 0.2s ease-in-out, border 0.2s ease-in-out,
+      color 0.2s ease-in-out;
+
     &:hover {
       background: ${({ isTransparent, isWhite, theme }) =>
         isTransparent
           ? 'none'
           : isWhite
           ? theme.color.white
-          : theme.color.darkGreen};
+          : theme.color.green};
 
       border: ${({ isTransparent, theme }) =>
         isTransparent ? `1px solid ${theme.color.darkGreen}` : 'none'};
@@ -191,6 +199,8 @@ Button.propTypes = {
   isOutsideLink: PropTypes.bool,
   isWhite: PropTypes.bool,
   className: PropTypes.string,
+  rel: PropTypes.string,
+  target: PropTypes.string,
 };
 
 Button.defaultProps = {
@@ -199,6 +209,8 @@ Button.defaultProps = {
   isOutsideLink: false,
   isWhite: false,
   className: '',
+  rel: '',
+  target: '',
 };
 
 export default Button;

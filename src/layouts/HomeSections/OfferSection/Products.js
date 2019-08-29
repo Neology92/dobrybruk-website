@@ -6,7 +6,7 @@ import plate from 'assets/images/plate.svg';
 import aggregate from 'assets/images/aggregate.svg';
 import pot from 'assets/images/pot.svg';
 
-import { Product } from 'components';
+import { Product, Button } from 'components';
 
 import OfferHeading from './OfferHeading';
 import OfferBlock from './OfferBlock';
@@ -86,7 +86,17 @@ const Products = () => {
           photo1={data.brickPhoto1.childImageSharp.fluid}
           photo2={data.brickPhoto2.childImageSharp.fluid}
         >
-          content
+          <p>
+            Pełny katalog znajdziesz <br /> na stronie <span>Semmelrock:</span>
+          </p>
+          <Button
+            isOutsideLink
+            to="https://semmelrock.pl/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Poznaj ofertę
+          </Button>
         </Product>
         <Product
           icon={plate}
@@ -94,7 +104,17 @@ const Products = () => {
           photo1={data.platePhoto1.childImageSharp.fluid}
           photo2={data.platePhoto2.childImageSharp.fluid}
         >
-          content
+          <p>
+            Pełny katalog znajdziesz <br /> na stronie <span>Semmelrock:</span>
+          </p>
+          <Button
+            isOutsideLink
+            to="https://semmelrock.pl/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Poznaj ofertę
+          </Button>
         </Product>
         <Product
           icon={aggregate}
@@ -102,7 +122,16 @@ const Products = () => {
           photo1={data.aggregatePhoto1.childImageSharp.fluid}
           photo2={data.aggregatePhoto2.childImageSharp.fluid}
         >
-          content
+          <ul>
+            <li>Grysy</li>
+            <li>Piaski</li>
+            <li>Żwir rzeczny</li>
+            <li>Otoczaki ozdobne</li>
+            <li>Łupek</li>
+            <li>Mieszanka 0/31.5 0/63</li>
+            <li>Klimiec</li>
+            <li>Tłuczeń</li>
+          </ul>
         </Product>
         <Product
           icon={pot}
@@ -110,7 +139,13 @@ const Products = () => {
           photo1={data.potPhoto1.childImageSharp.fluid}
           photo2={data.potPhoto2.childImageSharp.fluid}
         >
-          content
+          <ul>
+            <li>Donice ogrodowe</li>
+            <li>Doniczki domowe</li>
+            <li>Eko-board system</li>
+            <li>Eko palisady</li>
+            <li>Agrowłóknina</li>
+          </ul>
         </Product>
       </OfferBlock>
     </div>

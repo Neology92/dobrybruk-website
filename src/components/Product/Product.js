@@ -52,7 +52,7 @@ const Product = ({ children, icon, name, photo1, photo2 }) => {
 const Shutter = styled.div`
   display: none;
 
-  ${({ theme }) => theme.media.above.l} {
+  ${({ theme }) => theme.media.above.xl} {
     display: ${({ isModalOpen }) => (isModalOpen ? 'block' : 'none')};
 
     background: rgb(${({ theme }) => theme.color.rgb.darkGreen}, 0.6);

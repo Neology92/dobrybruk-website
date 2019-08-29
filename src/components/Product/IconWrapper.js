@@ -37,8 +37,11 @@ const IconWrapper = styled.button`
     }
   }
 
-  ${({ theme }) => theme.media.above.l} {
+  pointer-events: none;
+
+  ${({ theme }) => theme.media.above.xl} {
     cursor: pointer;
+    pointer-events: all;
 
     h4 {
       color: ${({ theme }) => theme.color.lightGreen};

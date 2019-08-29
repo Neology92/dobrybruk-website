@@ -37,7 +37,39 @@ const ChildrenWrapper = styled.div`
 
   margin: 10px;
 
-  background: red;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  p {
+    font-size: 2.2rem;
+    font-weight: 500;
+  }
+
+  span {
+    color: ${({ theme }) => theme.color.darkGreen};
+  }
+
+  ul {
+    list-style-type: circle;
+  }
+
+  li {
+    padding: 3px 5px;
+    font-size: 2rem;
+    font-weight: 500;
+    color: ${({ theme }) => theme.color.green};
+  }
+
+  ${({ theme }) => theme.media.above.xxxl} {
+    p {
+      font-size: 2.5rem;
+    }
+    li {
+      font-size: 2.4rem;
+    }
+  }
 `;
 
 const StyledIcon = styled(Icon)`

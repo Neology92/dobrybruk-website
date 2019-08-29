@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const Modal = styled.div`
   display: none;
 
-  ${({ theme }) => theme.media.above.l} {
+  ${({ theme }) => theme.media.above.xl} {
     display: ${({ isModalOpen }) => (isModalOpen ? 'block' : 'none')};
 
     height: 80vh;

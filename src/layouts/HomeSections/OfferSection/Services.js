@@ -55,7 +55,7 @@ const Services = () => {
           photo1={data.truckPhoto1.childImageSharp.fluid}
           photo2={data.truckPhoto2.childImageSharp.fluid}
         >
-          content
+          <p>Wycena indywidualna</p>
         </Product>
         <Product
           icon={paving}
@@ -63,7 +63,7 @@ const Services = () => {
           photo1={data.pavingPhoto1.childImageSharp.fluid}
           photo2={data.pavingPhoto2.childImageSharp.fluid}
         >
-          content
+          <p>Wycena indywidualna</p>
         </Product>
       </OfferBlock>
     </Wrapper>
