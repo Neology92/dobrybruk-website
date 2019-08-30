@@ -6,10 +6,10 @@ import CategoryButton from './CategoryButton';
 const SortingBar = () => {
   return (
     <Wrapper>
-      <CategoryButton isActive="false">Donice</CategoryButton>
-      <CategoryButton isActive="false">Płyty Tarasowe</CategoryButton>
-      <CategoryButton isActive="false">Kostka Brukowa</CategoryButton>
-      <CategoryButton isActive="false">Mała Architektura</CategoryButton>
+      <CategoryButton isActive={false}>Donice</CategoryButton>
+      <CategoryButton isActive={false}>Płyty Tarasowe</CategoryButton>
+      <CategoryButton isActive={false}>Kostka Brukowa</CategoryButton>
+      <CategoryButton isActive={false}>Mała Architektura</CategoryButton>
     </Wrapper>
   );
 };
