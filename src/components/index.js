@@ -8,6 +8,9 @@ import GallerySectionPhoto from './GallerySectionPhoto/GallerySectionPhoto';
 import Footer from './Footer/Footer';
 import Map from './Map/Map';
 import PhotoFooter from './PhotoFooter/PhotoFooter';
+import MasonryGrid from './MasonryGrid/MasonryGrid';
+import GalleryHeader from './GalleryHeader/GalleryHeader';
+import SortingBar from './SortingBar/SortingBar';
 
 export {
   SEO,
@@ -20,4 +23,7 @@ export {
   Footer,
   Map,
   PhotoFooter,
+  MasonryGrid,
+  GalleryHeader,
+  SortingBar,
 };

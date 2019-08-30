@@ -1,44 +1,59 @@
-import React from 'react';
-import styled from 'styled-components';
+import React, { Component } from 'react';
+import { graphql } from 'gatsby';
+import PropTypes from 'prop-types';
+// import styled from 'styled-components';
 
-import gear from 'assets/images/gear.svg';
 import { MainLayout } from 'layouts';
-import { SEO, Icon } from 'components';
-import { rotate } from 'assets/styles/keyframes';
+import { SEO, MasonryGrid, GalleryHeader, SortingBar } from 'components';
 
-const GaleriaInspiracji = () => (
-  <MainLayout style={{ background: '#D3D3D3' }}>
-    <SEO title="Galeria Inspiracji" />
-    <div style={{ height: '50px' }} />
-    <h1 style={{ textAlign: 'center' }}>Galeria Inspiracji</h1>
-    <h2 style={{ textAlign: 'center' }}> Strona w budowie </h2>
-    <StyledSmallGear src={gear} />
-    <StyledBigGear src={gear} />
-  </MainLayout>
-);
+class GaleriaInspiracji extends Component {
+  constructor() {
+    super();
+    this.state = {};
+  }
 
-const StyledSmallGear = styled(Icon)`
-  width: 30px;
-  height: 30px;
-  margin: 100px auto 0;
-  padding: 0 40px 0 0;
+  render() {
+    const {
+      data: {
+        graphcms: { photos },
+      },
+    } = this.props;
 
-  svg {
-    width: 30px;
-    fill: ${({ theme }) => theme.color.darkGreen};
-    animation: ${rotate} 6s 0.1s infinite linear reverse;
+    return (
+      <MainLayout style={{ background: '#D3D3D3' }}>
+        <SEO title="Galeria Inspiracji" />
+        <GalleryHeader />
+        <SortingBar />
+        <MasonryGrid photos={photos} />
+      </MainLayout>
+    );
+  }
+}
+
+export const imagesQuery = graphql`
+  query {
+    graphcms {
+      photos: photosConnection(
+        orderBy: createdAt_ASC
+        where: { status: PUBLISHED }
+      ) {
+        edges {
+          node {
+            id
+            name
+            category
+            image {
+              url
+            }
+          }
+        }
+      }
+    }
   }
 `;
 
-const StyledBigGear = styled(Icon)`
-  width: 60px;
-  margin: -22px auto;
-  padding: 0 0 0 32px;
-  svg {
-    width: 100%;
-    fill: ${({ theme }) => theme.color.darkGreen};
-    animation: ${rotate} 6s infinite linear;
-  }
-`;
+GaleriaInspiracji.propTypes = {
+  data: PropTypes.node.isRequired,
+};
 
 export default GaleriaInspiracji;

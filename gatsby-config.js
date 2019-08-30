@@ -13,6 +13,15 @@ module.exports = {
         path: `${__dirname}/src/assets/images`,
       },
     },
+    {
+      resolve: 'gatsby-source-graphql',
+      options: {
+        typeName: 'GraphCMS',
+        fieldName: 'graphcms',
+        url:
+          'https://api-euwest.graphcms.com/v1/cjzo65ee21v7901f68ek4177n/master',
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-resolve-src`, // Allows to use absolute path
