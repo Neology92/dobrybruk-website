@@ -1,13 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import CategoryButton from './CategoryButton';
+
 const SortingBar = () => {
   return (
     <Wrapper>
-      <CategoryButton>Donice</CategoryButton>
-      <CategoryButton>Płyty Tarasowe</CategoryButton>
-      <CategoryButton>Kostka Brukowa</CategoryButton>
-      <CategoryButton>Mała Architektura</CategoryButton>
+      <CategoryButton isActive="false">Donice</CategoryButton>
+      <CategoryButton isActive="false">Płyty Tarasowe</CategoryButton>
+      <CategoryButton isActive="false">Kostka Brukowa</CategoryButton>
+      <CategoryButton isActive="false">Mała Architektura</CategoryButton>
     </Wrapper>
   );
 };
@@ -23,18 +25,20 @@ const Wrapper = styled.div`
   align-items: flex-start;
 
   background: ${({ theme }) => theme.color.greyL2};
+
+  ${({ theme }) => theme.media.above.m} {
+    width: 90%;
+    height: 100px;
+    padding: 0 5%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  ${({ theme }) => theme.media.above.l} {
+    width: 80%;
+    padding: 0 10%;
+    justify-content: flex-start;
+  }
 `;
 
-const CategoryButton = styled.button`
-  background: none;
-  border: none;
-
-  margin: 9px 0;
-  padding: 0;
-
-  color: ${({ theme }) => theme.color.darkGrey};
-
-  font-size: 2.2rem;
-  font-weight: 500;
-`;
 export default SortingBar;
