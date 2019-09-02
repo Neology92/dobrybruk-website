@@ -6,7 +6,7 @@ import styled from 'styled-components';
 const OfferImage = () => {
   const data = useStaticQuery(graphql`
     query {
-      file(relativePath: { eq: "offerSectionImage.png" }) {
+      file(relativePath: { eq: "offerSectionImage.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 532, quality: 100) {
             ...GatsbyImageSharpFluid
