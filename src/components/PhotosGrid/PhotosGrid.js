@@ -1,20 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
 import styled from 'styled-components';
 
-import { StyledLink, StyledImg } from './styled';
-import ImgWrapper from './ImgWrapper';
+import Photo from './Photo';
 
 const PhotosGrid = ({ photos }) => {
   return (
     <Wrapper>
       {photos.map(photo => (
-        <ImgWrapper key={photo.node.id}>
-          <StyledLink to={`/galeria-inspiracji/${/*photo.node.id*/ ``}`}>
-            <StyledImg src={photo.node.image.url} alt={photo.node.name} />
-          </StyledLink>
-        </ImgWrapper>
+        <Photo node={photo.node} key={photo.node.id} />
       ))}
     </Wrapper>
   );

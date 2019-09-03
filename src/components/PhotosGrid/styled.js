@@ -1,11 +1,14 @@
 import styled from 'styled-components';
 
-import { Link } from 'gatsby';
-
-const StyledLink = styled(Link)`
+const StyledButton = styled.button`
   padding: 0;
   margin: 0;
   display: block;
+  background: none;
+  outline: none;
+  border: none;
+
+  cursor: pointer;
 `;
 
 const StyledImg = styled.img`
@@ -17,4 +20,4 @@ const StyledImg = styled.img`
   }
 `;
 
-export { StyledLink, StyledImg };
+export { StyledButton, StyledImg };

@@ -1,10 +1,10 @@
 import React, { useState, useRef } from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
 
 import { useClickOutside } from 'utils';
 import PopUp from '../PopUp/PopUp';
 import Modal from '../Modal/Modal';
+import Shutter from '../Shutter/Shutter';
 
 import IconWrapper from './IconWrapper';
 import Text from './Text';
@@ -35,8 +35,8 @@ const Product = ({ children, icon, name, photo1, photo2 }) => {
         </span>
       </IconWrapper>
 
-      <Shutter isModalOpen={isModalOpen} />
-      <PopUp isModalOpen={isModalOpen} ref={modalRef}>
+      <Shutter isOpen={isModalOpen} />
+      <PopUp isOpen={isModalOpen} ref={modalRef}>
         <Modal
           name={name}
           icon={icon}
@@ -50,23 +50,6 @@ const Product = ({ children, icon, name, photo1, photo2 }) => {
     </>
   );
 };
-
-const Shutter = styled.div`
-  display: none;
-
-  ${({ theme }) => theme.media.above.xl} {
-    display: ${({ isModalOpen }) => (isModalOpen ? 'block' : 'none')};
-
-    background: rgb(${({ theme }) => theme.color.rgb.darkGreen}, 0.6);
-
-    width: 100%;
-    height: calc(100% - 80px);
-    position: fixed;
-    left: 0;
-    top: 80px;
-    z-index: 9999;
-  }
-`;
 
 Product.propTypes = {
   children: PropTypes.node.isRequired,

@@ -4,12 +4,13 @@ const Modal = styled.div`
   display: none;
 
   ${({ theme }) => theme.media.above.xl} {
-    display: ${({ isModalOpen }) => (isModalOpen ? 'block' : 'none')};
+    display: ${({ isOpen }) => (isOpen ? 'block' : 'none')};
 
     height: 80vh;
     width: calc(80vh * 1.7);
 
-    background: ${({ theme }) => theme.color.darkGrey};
+    background: ${({ theme, isGreen }) =>
+      isGreen ? theme.color.darkGreen : theme.color.darkGrey};
 
     position: fixed;
     top: 15%;
