@@ -28,15 +28,33 @@ class GaleriaInspiracji extends Component {
 
     const setFilterCats = obj => {
       this.setState(obj);
-      console.log('update');
     };
+
+    const filterByCategories = () => {
+      const filtered = photos.edges.filter(edge => {
+        for (let [key, value] of Object.entries(this.state)) {
+          if (key === edge.node.category) {
+            return value;
+          }
+        }
+        return false;
+      });
+
+      if (filtered.length) {
+        return filtered;
+      } else {
+        return photos.edges;
+      }
+    };
+
+    const filteredPhotos = filterByCategories();
 
     return (
       <MainLayout style={{ background: '#D3D3D3' }}>
         <SEO title="Galeria Inspiracji" />
         <GalleryHeader />
         <SortingBar setFilterCats={setFilterCats} filterCats={this.state} />
-        <PhotosGrid photos={photos} />
+        <PhotosGrid photos={filteredPhotos} />
       </MainLayout>
     );
   }

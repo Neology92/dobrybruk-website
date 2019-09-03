@@ -9,10 +9,10 @@ import ImgWrapper from './ImgWrapper';
 const PhotosGrid = ({ photos }) => {
   return (
     <Wrapper>
-      {photos.edges.map(edge => (
-        <ImgWrapper key={edge.node.id}>
-          <StyledLink to={`/galeria-inspiracji/${/*edge.node.id*/ ``}`}>
-            <StyledImg src={edge.node.image.url} alt={edge.node.name} />
+      {photos.map(photo => (
+        <ImgWrapper key={photo.node.id}>
+          <StyledLink to={`/galeria-inspiracji/${/*photo.node.id*/ ``}`}>
+            <StyledImg src={photo.node.image.url} alt={photo.node.name} />
           </StyledLink>
         </ImgWrapper>
       ))}
