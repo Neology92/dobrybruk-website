@@ -4,38 +4,39 @@ import styled from 'styled-components';
 
 import CategoryButton from './CategoryButton';
 
-const SortingBar = ({ filterCats, setFilterCats }) => {
+const SortingBar = ({ activeCategory, setFilterCat }) => {
+  const switchCategory = cat => {
+    if (activeCategory === cat) {
+      setFilterCat('');
+    } else {
+      setFilterCat(cat);
+    }
+  };
+
   return (
     <Wrapper>
       <CategoryButton
-        isActive={filterCats.Donice}
-        onClick={() => setFilterCats({ Donice: !filterCats.Donice })}
+        isActive={activeCategory === 'Donice'}
+        onClick={() => switchCategory('Donice')}
       >
         <span tabIndex="-1">Donice</span>
       </CategoryButton>
       <CategoryButton
-        isActive={filterCats.Taras}
-        onClick={() => setFilterCats({ Taras: !filterCats.Taras })}
+        isActive={activeCategory === 'Taras'}
+        onClick={() => switchCategory('Taras')}
       >
-        {' '}
         <span tabIndex="-1">Płyty Tarasowe</span>
       </CategoryButton>
       <CategoryButton
-        isActive={filterCats.Kostka_brukowa}
-        onClick={() =>
-          setFilterCats({ Kostka_brukowa: !filterCats.Kostka_brukowa })
-        }
+        isActive={activeCategory === 'Kostka_brukowa'}
+        onClick={() => switchCategory('Kostka_brukowa')}
       >
-        {' '}
         <span tabIndex="-1">Kostka Brukowa</span>
       </CategoryButton>
       <CategoryButton
-        isActive={filterCats.Mala_architektura}
-        onClick={() =>
-          setFilterCats({ Mala_architektura: !filterCats.Mala_architektura })
-        }
+        isActive={activeCategory === 'Mala_architektura'}
+        onClick={() => switchCategory('Mala_architektura')}
       >
-        {' '}
         <span tabIndex="-1">Mała Architektura</span>
       </CategoryButton>
     </Wrapper>
@@ -70,8 +71,8 @@ const Wrapper = styled.div`
 `;
 
 SortingBar.propTypes = {
-  setFilterCats: PropTypes.func.isRequired,
-  filterCats: PropTypes.object.isRequired,
+  setFilterCat: PropTypes.func.isRequired,
+  activeCategory: PropTypes.object.isRequired,
 };
 
 export default SortingBar;

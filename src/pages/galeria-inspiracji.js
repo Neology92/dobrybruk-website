@@ -1,5 +1,3 @@
-/* eslint react/no-unused-state: 0 no-console:0*/
-
 import React, { Component } from 'react';
 import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
@@ -12,32 +10,27 @@ class GaleriaInspiracji extends Component {
   constructor() {
     super();
     this.state = {
-      Donice: false,
-      Taras: false,
-      Mala_architektura: false,
-      Kostka_brukowa: false,
+      category: '',
     };
   }
 
   render() {
     const {
-      data: {
-        graphcms: { photos },
+      props: {
+        data: {
+          graphcms: { photos },
+        },
       },
-    } = this.props;
+      state,
+    } = this;
 
-    const setFilterCats = obj => {
-      this.setState(obj);
+    const setFilterCat = str => {
+      this.setState({ category: str });
     };
 
     const filterByCategories = () => {
-      const filtered = photos.edges.filter(edge => {
-        for (let [key, value] of Object.entries(this.state)) {
-          if (key === edge.node.category) {
-            return value;
-          }
-        }
-        return false;
+      const filtered = photos.edges.filter(({ node }) => {
+        return node.category === state.category;
       });
 
       if (filtered.length) {
@@ -53,7 +46,10 @@ class GaleriaInspiracji extends Component {
       <MainLayout style={{ background: '#D3D3D3' }}>
         <SEO title="Galeria Inspiracji" />
         <GalleryHeader />
-        <SortingBar setFilterCats={setFilterCats} filterCats={this.state} />
+        <SortingBar
+          setFilterCat={setFilterCat}
+          activeCategory={state.category}
+        />
         <PhotosGrid photos={filteredPhotos} />
       </MainLayout>
     );
