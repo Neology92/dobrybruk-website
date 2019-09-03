@@ -10,6 +10,11 @@ const StyledLink = styled(Link)`
 
 const StyledImg = styled.img`
   width: 100%;
+
+  transition: transform 0.3s ease-in-out;
+  :hover {
+    transform: scale(1.04);
+  }
 `;
 
 export { StyledLink, StyledImg };

@@ -5,20 +5,20 @@ const ImgWrapper = styled.div`
   margin: 3px 0;
 
   ${({ theme }) => theme.media.above.s} {
-    margin: 5px;
+    margin: 10px;
   }
 
   ${({ theme }) => theme.media.above.m} {
-    width: calc(calc(100% / 2) - 10px);
+    width: calc(calc(100% / 2) - 20px);
   }
 
   ${({ theme }) => theme.media.above.xl} {
-    width: calc(calc(100% / 3) - 10px);
+    width: calc(calc(100% / 3) - 20px);
   }
 
   ${({ theme }) => theme.media.above.xxxl} {
-    margin: 10px;
-    width: calc(calc(100% / 3) - 20px);
+    margin: 15px;
+    width: calc(calc(100% / 3) - 30px);
   }
 `;
 

@@ -28,19 +28,14 @@ const Wrapper = styled.section`
   flex-direction: column;
 
   ${({ theme }) => theme.media.above.s} {
-    width: 80%;
+    width: 81%;
 
     flex-direction: row;
     flex-wrap: wrap;
   }
 
   ${({ theme }) => theme.media.above.m} {
-    width: 80%;
     margin: 70px auto;
-  }
-
-  ${({ theme }) => theme.media.above.m} {
-    width: 80%;
   }
 `;
 
