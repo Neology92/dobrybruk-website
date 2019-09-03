@@ -11,13 +11,14 @@ const SortingBar = ({ filterCats, setFilterCats }) => {
         isActive={filterCats.Donice}
         onClick={() => setFilterCats({ Donice: !filterCats.Donice })}
       >
-        Donice
+        <span tabIndex="-1">Donice</span>
       </CategoryButton>
       <CategoryButton
         isActive={filterCats.Taras}
         onClick={() => setFilterCats({ Taras: !filterCats.Taras })}
       >
-        Płyty Tarasowe
+        {' '}
+        <span tabIndex="-1">Płyty Tarasowe</span>
       </CategoryButton>
       <CategoryButton
         isActive={filterCats.Kostka_brukowa}
@@ -25,7 +26,8 @@ const SortingBar = ({ filterCats, setFilterCats }) => {
           setFilterCats({ Kostka_brukowa: !filterCats.Kostka_brukowa })
         }
       >
-        Kostka Brukowa
+        {' '}
+        <span tabIndex="-1">Kostka Brukowa</span>
       </CategoryButton>
       <CategoryButton
         isActive={filterCats.Mala_architektura}
@@ -33,7 +35,8 @@ const SortingBar = ({ filterCats, setFilterCats }) => {
           setFilterCats({ Mala_architektura: !filterCats.Mala_architektura })
         }
       >
-        Mała Architektura
+        {' '}
+        <span tabIndex="-1">Mała Architektura</span>
       </CategoryButton>
     </Wrapper>
   );

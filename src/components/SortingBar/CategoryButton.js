@@ -15,6 +15,12 @@ const CategoryButton = styled.button`
 
   cursor: pointer;
 
+  & > span {
+    &:focus {
+      outline: none;
+    }
+  }
+
   ${({ theme }) => theme.media.above.m} {
     margin: 0 15px;
     padding: 0;
@@ -42,6 +48,11 @@ const CategoryButton = styled.button`
       left: 3px;
 
       transition: transform 0.3s ease-in-out;
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: 1px 1px 0 2px ${({ theme }) => theme.color.greyL1};
     }
   }
 
