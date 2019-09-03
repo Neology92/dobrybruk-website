@@ -6,7 +6,7 @@ import styled from 'styled-components';
 import { StyledLink, StyledImg } from './styled';
 import ImgWrapper from './ImgWrapper';
 
-const MasonryGrid = ({ photos }) => {
+const PhotosGrid = ({ photos }) => {
   return (
     <Wrapper>
       {photos.edges.map(edge => (
@@ -44,8 +44,8 @@ const Wrapper = styled.section`
   }
 `;
 
-MasonryGrid.propTypes = {
+PhotosGrid.propTypes = {
   photos: PropTypes.object.isRequired,
 };
 
-export default MasonryGrid;
+export default PhotosGrid;

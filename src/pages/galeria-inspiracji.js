@@ -1,15 +1,22 @@
+/* eslint react/no-unused-state: 0 no-console:0*/
+
 import React, { Component } from 'react';
 import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 // import styled from 'styled-components';
 
 import { MainLayout } from 'layouts';
-import { SEO, MasonryGrid, GalleryHeader, SortingBar } from 'components';
+import { SEO, PhotosGrid, GalleryHeader, SortingBar } from 'components';
 
 class GaleriaInspiracji extends Component {
   constructor() {
     super();
-    this.state = {};
+    this.state = {
+      Donice: false,
+      Taras: false,
+      Mala_architektura: false,
+      Kostka_brukowa: false,
+    };
   }
 
   render() {
@@ -19,12 +26,17 @@ class GaleriaInspiracji extends Component {
       },
     } = this.props;
 
+    const setFilterCats = obj => {
+      this.setState(obj);
+      console.log('update');
+    };
+
     return (
       <MainLayout style={{ background: '#D3D3D3' }}>
         <SEO title="Galeria Inspiracji" />
         <GalleryHeader />
-        <SortingBar />
-        <MasonryGrid photos={photos} />
+        <SortingBar setFilterCats={setFilterCats} filterCats={this.state} />
+        <PhotosGrid photos={photos} />
       </MainLayout>
     );
   }
@@ -46,6 +58,9 @@ export const imagesQuery = graphql`
               url
             }
           }
+        }
+        aggregate {
+          count
         }
       }
     }

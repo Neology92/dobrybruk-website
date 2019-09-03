@@ -8,7 +8,7 @@ import GallerySectionPhoto from './GallerySectionPhoto/GallerySectionPhoto';
 import Footer from './Footer/Footer';
 import Map from './Map/Map';
 import PhotoFooter from './PhotoFooter/PhotoFooter';
-import MasonryGrid from './MasonryGrid/MasonryGrid';
+import PhotosGrid from './PhotosGrid/PhotosGrid';
 import GalleryHeader from './GalleryHeader/GalleryHeader';
 import SortingBar from './SortingBar/SortingBar';
 
@@ -23,7 +23,7 @@ export {
   Footer,
   Map,
   PhotoFooter,
-  MasonryGrid,
+  PhotosGrid,
   GalleryHeader,
   SortingBar,
 };

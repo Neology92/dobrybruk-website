@@ -1,15 +1,40 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 import CategoryButton from './CategoryButton';
 
-const SortingBar = () => {
+const SortingBar = ({ filterCats, setFilterCats }) => {
   return (
     <Wrapper>
-      <CategoryButton isActive={false}>Donice</CategoryButton>
-      <CategoryButton isActive={false}>Płyty Tarasowe</CategoryButton>
-      <CategoryButton isActive={false}>Kostka Brukowa</CategoryButton>
-      <CategoryButton isActive={false}>Mała Architektura</CategoryButton>
+      <CategoryButton
+        isActive={filterCats.Donice}
+        onClick={() => setFilterCats({ Donice: !filterCats.Donice })}
+      >
+        Donice
+      </CategoryButton>
+      <CategoryButton
+        isActive={filterCats.Taras}
+        onClick={() => setFilterCats({ Taras: !filterCats.Taras })}
+      >
+        Płyty Tarasowe
+      </CategoryButton>
+      <CategoryButton
+        isActive={filterCats.Kostka_brukowa}
+        onClick={() =>
+          setFilterCats({ Kostka_brukowa: !filterCats.Kostka_brukowa })
+        }
+      >
+        Kostka Brukowa
+      </CategoryButton>
+      <CategoryButton
+        isActive={filterCats.Mala_architektura}
+        onClick={() =>
+          setFilterCats({ Mala_architektura: !filterCats.Mala_architektura })
+        }
+      >
+        Mała Architektura
+      </CategoryButton>
     </Wrapper>
   );
 };
@@ -40,5 +65,10 @@ const Wrapper = styled.div`
     justify-content: flex-start;
   }
 `;
+
+SortingBar.propTypes = {
+  setFilterCats: PropTypes.func.isRequired,
+  filterCats: PropTypes.object.isRequired,
+};
 
 export default SortingBar;
