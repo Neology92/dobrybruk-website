@@ -14,6 +14,12 @@ const IconWrapper = styled.button`
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   outline: transparent;
 
+  & > span {
+    &:focus {
+      outline: none;
+    }
+  }
+
   > div {
     height: 70px;
     display: flex;

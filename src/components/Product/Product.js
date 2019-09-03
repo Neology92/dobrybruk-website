@@ -27,10 +27,12 @@ const Product = ({ children, icon, name, photo1, photo2 }) => {
   return (
     <>
       <IconWrapper onClick={switchModal}>
-        <div>
-          <StyledIcon src={icon} />
-        </div>
-        <Text>{name}</Text>
+        <span tabIndex="-1">
+          <div>
+            <StyledIcon src={icon} />
+          </div>
+          <Text>{name}</Text>
+        </span>
       </IconWrapper>
 
       <Shutter isModalOpen={isModalOpen} />
