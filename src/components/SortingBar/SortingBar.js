@@ -16,28 +16,45 @@ const SortingBar = ({ activeCategory, setFilterCat }) => {
   return (
     <Wrapper>
       <CategoryButton
-        isActive={activeCategory === 'Donice'}
-        onClick={() => switchCategory('Donice')}
-      >
-        <span tabIndex="-1">Donice</span>
-      </CategoryButton>
-      <CategoryButton
         isActive={activeCategory === 'Taras'}
         onClick={() => switchCategory('Taras')}
       >
         <span tabIndex="-1">Płyty Tarasowe</span>
       </CategoryButton>
+
       <CategoryButton
         isActive={activeCategory === 'Kostka_brukowa'}
         onClick={() => switchCategory('Kostka_brukowa')}
       >
         <span tabIndex="-1">Kostka Brukowa</span>
       </CategoryButton>
+
       <CategoryButton
         isActive={activeCategory === 'Mala_architektura'}
         onClick={() => switchCategory('Mala_architektura')}
       >
         <span tabIndex="-1">Mała Architektura</span>
+      </CategoryButton>
+
+      <CategoryButton
+        isActive={activeCategory === 'Kamienie'}
+        onClick={() => switchCategory('Kamienie')}
+      >
+        <span tabIndex="-1">Kamienie, kruszywa</span>
+      </CategoryButton>
+
+      <CategoryButton
+        isActive={activeCategory === 'Betonowe_drewno'}
+        onClick={() => switchCategory('Betonowe_drewno')}
+      >
+        <span tabIndex="-1">Betonowe Drewno</span>
+      </CategoryButton>
+
+      <CategoryButton
+        isActive={activeCategory === 'Donice'}
+        onClick={() => switchCategory('Donice')}
+      >
+        <span tabIndex="-1">Donice, dodatki</span>
       </CategoryButton>
     </Wrapper>
   );
@@ -45,7 +62,7 @@ const SortingBar = ({ activeCategory, setFilterCat }) => {
 
 const Wrapper = styled.div`
   width: 70%;
-  height: 230px;
+  height: 300px;
   padding: 0 15%;
 
   display: flex;

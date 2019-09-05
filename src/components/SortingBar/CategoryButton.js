@@ -44,7 +44,7 @@ const CategoryButton = styled.button`
         isActive ? theme.color.darkGrey : theme.color.greyL2};
 
       position: absolute;
-      top: -36px;
+      top: -24px;
       left: 3px;
 
       transition: transform 0.3s ease-in-out;
@@ -63,6 +63,12 @@ const CategoryButton = styled.button`
 
   ${({ theme }) => theme.media.above.xl} {
     margin: 0 25px 0 5px;
+  }
+  ${({ theme }) => theme.media.above.xxl} {
+    &::after {
+      top: -36px;
+      left: 3px;
+    }
   }
 
   ${({ theme }) => theme.media.above.xxxl} {
