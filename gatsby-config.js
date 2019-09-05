@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `DobryBruk | Kostka Brukowa Iwona Legner`,
+    title: `DobryBruk.pl | Kostka Brukowa IWONA LEGNER`,
     description: `W naszym asortymencie: kostka brukowa, płyty tarasowe, kruszywa, dodatki ogrodowe, elementy małej architektury i inne. Wstąp do nas, a pokochasz wakacje we własnym ogrodzie.`,
     author: `@neology`,
   },
@@ -51,7 +51,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `DobryBruk | Kostka Brukowa Iwona Legner`,
+        name: `DobryBruk.pl | Kostka Brukowa IWONA LEGNER`,
         short_name: `DobryBruk`,
         start_url: `/`,
         background_color: `#005526`,
