@@ -14,19 +14,6 @@ const Heading = styled.h1`
 
   position: relative;
 
-  ::after {
-    content: '';
-    width: 32px;
-    height: 32px;
-
-    transform: rotate(45deg);
-    background: ${({ theme }) => theme.color.green};
-
-    position: absolute;
-    bottom: -16px;
-    left: calc(50% - 16px);
-  }
-
   ${({ theme }) => theme.media.above.m} {
     width: 240px;
     height: 60px;

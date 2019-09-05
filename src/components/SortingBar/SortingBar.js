@@ -62,7 +62,7 @@ const SortingBar = ({ activeCategory, setFilterCat }) => {
 
 const Wrapper = styled.div`
   width: 70%;
-  height: 300px;
+  height: 340px;
   padding: 0 15%;
 
   display: flex;
@@ -72,6 +72,21 @@ const Wrapper = styled.div`
 
   background: ${({ theme }) => theme.color.greyL2};
 
+  position: relative;
+
+  ::after {
+    content: '';
+    width: 32px;
+    height: 32px;
+
+    transform: rotate(45deg);
+    background: ${({ theme }) => theme.color.greyL2};
+
+    position: absolute;
+    bottom: -16px;
+    left: calc(50% - 16px);
+  }
+
   ${({ theme }) => theme.media.above.m} {
     width: 90%;
     height: 100px;
@@ -79,6 +94,10 @@ const Wrapper = styled.div`
     flex-direction: row;
     align-items: center;
     justify-content: center;
+
+    ::after {
+      display: none;
+    }
   }
   ${({ theme }) => theme.media.above.l} {
     width: 80%;

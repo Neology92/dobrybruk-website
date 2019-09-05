@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const CategoryButton = styled.button`
   border: none;
   position: relative;
-  margin: 5px 0;
+  margin: 7px 0;
   padding: 4px 10px;
 
   background: ${({ isActive, theme }) =>
