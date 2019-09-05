@@ -8,7 +8,7 @@ const Photo2 = () => {
       file(relativePath: { eq: "galleryHeaderPhoto2.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 541, quality: 100) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_tracedSVG
           }
         }
       }
