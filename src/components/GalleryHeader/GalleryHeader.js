@@ -3,7 +3,8 @@ import React from 'react';
 import styled from 'styled-components';
 
 import Heading from './Heading';
-import { Photo1, Photo2 } from './Photos';
+import Photo1 from './Photo1';
+import Photo2 from './Photo2';
 
 const GalleryHeader = () => (
   <Wrapper>

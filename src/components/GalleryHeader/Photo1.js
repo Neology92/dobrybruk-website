@@ -18,20 +18,4 @@ const Photo1 = () => {
   return <Img fluid={data.file.childImageSharp.fluid} />;
 };
 
-const Photo2 = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      file(relativePath: { eq: "galleryHeaderPhoto2.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 541, quality: 100) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  `);
-
-  return <Img fluid={data.file.childImageSharp.fluid} />;
-};
-
-export { Photo1, Photo2 };
+export default Photo1;
