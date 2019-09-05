@@ -1,8 +1,18 @@
 import React from 'react';
+
 import styled from 'styled-components';
+
+import Heading from './Heading';
+import { Photo1, Photo2 } from './Photos';
 
 const GalleryHeader = () => (
   <Wrapper>
+    <div>
+      <Photo1 />
+    </div>
+    <div>
+      <Photo2 />
+    </div>
     <Heading>Galeria Inspiracji</Heading>
   </Wrapper>
 );
@@ -12,40 +22,45 @@ const Wrapper = styled.header`
   height: 215px;
 
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
 
   background: ${({ theme }) => theme.color.greyL1};
+
+  & > div {
+    display: none;
+  }
+
   ${({ theme }) => theme.media.above.m} {
     height: 300px;
+    & > div {
+      display: block;
+      height: 100%;
+      width: 41%;
+
+      margin: 50px 20px 0;
+    }
   }
-`;
 
-const Heading = styled.h1`
-  width: 320px;
-  height: 70px;
+  ${({ theme }) => theme.media.above.l} {
+    height: 375px;
+    & > div {
+      width: 41%;
+      margin: 50px 20px 0;
+    }
+  }
 
-  background: ${({ theme }) => theme.color.green};
+  ${({ theme }) => theme.media.above.xxl} {
+    & > div {
+      width: 31%;
+    }
+  }
 
-  text-align: center;
-  line-height: 65px;
-  color: ${({ theme }) => theme.color.white};
-  font-size: 3.2rem;
-  font-weight: 500;
-
-  position: relative;
-
-  ::after {
-    content: '';
-    width: 32px;
-    height: 32px;
-
-    transform: rotate(45deg);
-    background: ${({ theme }) => theme.color.green};
-
-    position: absolute;
-    bottom: -16px;
-    left: calc(50% - 16px);
+  ${({ theme }) => theme.media.above.xxxl} {
+    & > div {
+      width: 541px;
+    }
   }
 `;
 

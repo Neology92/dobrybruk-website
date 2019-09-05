@@ -7,8 +7,8 @@ import { MainLayout } from 'layouts';
 import { SEO, PhotosGrid, GalleryHeader, SortingBar } from 'components';
 
 class GaleriaInspiracji extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       category: '',
     };
