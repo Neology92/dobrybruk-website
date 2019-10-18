@@ -1,8 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { CallToScroll } from 'components';
-
 import Heading from './Heading';
 import Products from './Products';
 import Services from './Services';
@@ -20,20 +18,24 @@ const OfferSection = () => (
         <Products />
         <Services />
       </ProductsWrapper>
-
-      <CallToScroll bgColor={({ theme }) => theme.color.white} />
     </RightWrapper>
   </SectionWrapper>
 );
 
 const SectionWrapper = styled.section`
-  margin: 0;
+  margin: 0 0 40px 0;
+  overflow: hidden;
+
   padding: 0;
   width: 100%;
 
   display: flex;
   flex-direction: row;
   justify-content: center;
+
+  ${({ theme }) => theme.media.above.m} {
+    margin: 0;
+  }
 `;
 
 const LeftWrapper = styled.div`

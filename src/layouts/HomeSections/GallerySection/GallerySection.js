@@ -51,12 +51,14 @@ const GallerySection = () => {
   );
 };
 const SectionWrapper = styled.section`
+  overflow: hidden;
+
   width: 100%;
   min-height: 100px;
 
   background: ${({ theme }) => theme.color.green};
 
-  ${({ theme }) => theme.media.above.l} {
+  ${({ theme }) => theme.media.above.m} {
     padding: 0 0 70px 0;
 
     position: relative;
@@ -64,7 +66,7 @@ const SectionWrapper = styled.section`
       content: '';
       width: 80px;
       height: 80px;
-      background: ${({ theme }) => theme.color.greyL2};
+      background: ${({ theme }) => theme.color.darkGreen};
       transform: rotate(45deg);
 
       position: absolute;
@@ -72,6 +74,19 @@ const SectionWrapper = styled.section`
       left: calc(50% - 40px);
 
       z-index: 9;
+    }
+
+    & ::after {
+      content: '';
+      width: 100%;
+      height: 10px;
+
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: 2;
+
+      background: ${({ theme }) => theme.color.darkGreen};
     }
   }
 `;
