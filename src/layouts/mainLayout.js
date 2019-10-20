@@ -13,12 +13,12 @@ if (typeof window !== 'undefined') {
   require('smooth-scroll')('a[href*="#"]');
 }
 
-const MainLayout = ({ children }) => (
+const MainLayout = ({ children, ...props }) => (
   <>
     <ThemeProvider theme={theme}>
       <>
         <GlobalStyle />
-        <Header />
+        <Header {...props} />
         <StyledMain>{children}</StyledMain>
         <Footer />
       </>

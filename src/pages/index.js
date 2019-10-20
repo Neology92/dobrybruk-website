@@ -13,7 +13,7 @@ import {
 import { SEO, PhotoFooter } from 'components';
 
 const IndexPage = ({ data }) => (
-  <MainLayout>
+  <MainLayout isNews={data.graphcms.newses.edges.length}>
     <SEO title="Home" />
     <HeroSection />
     <OfferSection />

@@ -18,7 +18,7 @@ class GaleriaInspiracji extends Component {
     const {
       props: {
         data: {
-          graphcms: { photos },
+          graphcms: { photos, newses },
         },
       },
       state,
@@ -43,7 +43,10 @@ class GaleriaInspiracji extends Component {
     const filteredPhotos = filterByCategories();
 
     return (
-      <MainLayout style={{ background: '#D3D3D3' }}>
+      <MainLayout
+        style={{ background: '#D3D3D3' }}
+        isNews={newses.edges.length}
+      >
         <SEO title="Galeria Inspiracji" />
         <GalleryHeader />
         <SortingBar
@@ -75,6 +78,16 @@ export const imagesQuery = graphql`
         }
         aggregate {
           count
+        }
+      }
+      newses: newsesConnection(
+        orderBy: createdAt_DESC
+        where: { status: PUBLISHED }
+      ) {
+        edges {
+          node {
+            id
+          }
         }
       }
     }

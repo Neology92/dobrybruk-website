@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const SectionWrapper = styled.section`
   width: 100%;
   min-height: 100px;
-  padding: 0 0 25px 0;
+  padding: 0px 0 25px 0;
 
   max-width: 100%;
 

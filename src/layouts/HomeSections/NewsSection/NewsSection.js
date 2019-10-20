@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import styled from 'styled-components';
+
 import { CallToScroll } from 'components';
 
 import SectionWrapper from './SectionWrapper';
@@ -9,12 +11,22 @@ import Info from './Info';
 import OrnamentsLeft from './OrnamentsLeft';
 import OrnamentsRight from './OrnamentsRight';
 
+const Scroller = styled.div`
+  height: 0;
+  width: 0;
+  position: absolute;
+
+  top: -81px;
+  left: 0;
+`;
+
 const NewsSection = ({ edges }) => (
   <>
     {edges.length ? (
       <>
         <SectionWrapper>
-          <OrnamentsLeft />
+          <Scroller id="news" />
+          <OrnamentsLeft id="news" />
           <OrnamentsRight />
           <Header>Aktualności</Header>
           {edges.map(({ node }) => (

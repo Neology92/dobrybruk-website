@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import MenuWrapper from './MenuWrapper';
 import MenuItem from './MenuItem';
@@ -11,9 +12,14 @@ const menuItems = [
   { name: 'Oferta', slug: '/#oferta' },
 ];
 
-const DesktopMenu = () => {
+const DesktopMenu = ({ isNews }) => {
   return (
     <MenuWrapper>
+      {isNews && (
+        <MenuItem>
+          <StyledLink to="/#news">Aktualności</StyledLink>
+        </MenuItem>
+      )}
       {menuItems.map(item => (
         <MenuItem key={item.name}>
           <StyledLink to={item.slug}>{item.name}</StyledLink>
@@ -21,6 +27,14 @@ const DesktopMenu = () => {
       ))}
     </MenuWrapper>
   );
+};
+
+DesktopMenu.propTypes = {
+  isNews: PropTypes.number,
+};
+
+DesktopMenu.defaultProps = {
+  isNews: 0,
 };
 
 export default DesktopMenu;

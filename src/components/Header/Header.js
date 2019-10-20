@@ -9,7 +9,7 @@ import MobileMenu from '../MobileMenu/MobileMenu';
 import DesktopMenu from '../DesktopMenu/DesktopMenu';
 import { StyledLogo } from './styled';
 
-const Header = () => {
+const Header = ({ ...props }) => {
   const [isMenuOpen, setMenuState] = useState(false);
 
   const toggleMobileMenu = () => {
@@ -27,7 +27,7 @@ const Header = () => {
       <InnerDiv>
         <Hamburger onClick={toggleMobileMenu} isOpen={isMenuOpen} />
         <MobileMenu isOpen={isMenuOpen} />
-        <DesktopMenu />
+        <DesktopMenu {...props} />
       </InnerDiv>
     </HeaderWrapper>
   );
