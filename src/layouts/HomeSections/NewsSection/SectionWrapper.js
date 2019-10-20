@@ -2,7 +2,8 @@ import styled from 'styled-components';
 
 const SectionWrapper = styled.section`
   width: 100%;
-  min-height: 135px;
+  min-height: 100px;
+  padding: 0 0 25px 0;
 
   max-width: 100%;
 
@@ -10,15 +11,15 @@ const SectionWrapper = styled.section`
   position: relative;
 
   ${({ theme }) => theme.media.above.m} {
-    min-height: 180px;
+    min-height: 150px;
   }
 
   ${({ theme }) => theme.media.above.l} {
-    min-height: 200px;
+    min-height: 170px;
   }
 
   ${({ theme }) => theme.media.above.xl} {
-    min-height: 220px;
+    min-height: 190px;
   }
 `;
 
