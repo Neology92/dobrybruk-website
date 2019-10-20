@@ -11,15 +11,24 @@ import OrnamentsRight from './OrnamentsRight';
 
 const NewsSection = ({ edges }) => (
   <>
-    <SectionWrapper>
-      <OrnamentsLeft />
-      <OrnamentsRight />
-      <Header>Aktualności</Header>
-      {edges.map(({ node }) => (
-        <Info key={node.id}>{node.info}</Info>
-      ))}
-    </SectionWrapper>
-    <CallToScroll bgColor={({ theme }) => theme.color.white} />
+    {edges.length ? (
+      <>
+        <SectionWrapper>
+          <OrnamentsLeft />
+          <OrnamentsRight />
+          <Header>Aktualności</Header>
+          {edges.map(({ node }) => (
+            <Info key={node.id}>{node.info}</Info>
+          ))}
+        </SectionWrapper>
+        <CallToScroll
+          bgColor={({ theme }) => theme.color.white}
+          display="none"
+        />
+      </>
+    ) : (
+      <CallToScroll bgColor={({ theme }) => theme.color.white} />
+    )}
   </>
 );
 

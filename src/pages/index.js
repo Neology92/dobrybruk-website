@@ -27,7 +27,10 @@ const IndexPage = ({ data }) => (
 export const infoQuery = graphql`
   query {
     graphcms {
-      newses: newsesConnection(orderBy: createdAt_DESC) {
+      newses: newsesConnection(
+        orderBy: createdAt_DESC
+        where: { status: PUBLISHED }
+      ) {
         edges {
           node {
             status

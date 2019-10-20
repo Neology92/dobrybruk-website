@@ -24,7 +24,24 @@ const CallToScroll = styled.div`
   }
 
   ${({ theme }) => theme.media.above.m} {
-    display: none;
+    height: 0px;
+
+    &::after {
+      content: '';
+      width: 80px;
+      height: 80px;
+
+      transform: rotate(45deg);
+
+      position: absolute;
+      bottom: -40px;
+      left: calc(50% - 40px);
+
+      background: ${({ theme }) => theme.color.greyL2};
+
+      z-index: 9;
+    }
+    display: ${props => (props.display ? props.display : 'block')};
   }
 `;
 
