@@ -37,7 +37,8 @@ const CallToScroll = styled.div`
       bottom: -40px;
       left: calc(50% - 40px);
 
-      background: ${({ theme }) => theme.color.greyL2};
+      background: ${({ theme, bgColor }) =>
+        bgColor ? bgColor : theme.color.greyL2};
 
       z-index: 9;
     }

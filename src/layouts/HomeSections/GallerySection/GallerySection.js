@@ -2,7 +2,7 @@ import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import styled from 'styled-components';
 
-import { GallerySectionPhoto, CallToScroll } from 'components';
+import { GallerySectionPhoto } from 'components';
 import { StyledButton } from './styled';
 
 const GallerySection = () => {
@@ -46,7 +46,6 @@ const GallerySection = () => {
           Zobacz więcej
         </StyledButton>
       </GallerySectionPhoto>
-      <CallToScroll bgColor={({ theme }) => theme.color.green} />
     </SectionWrapper>
   );
 };
