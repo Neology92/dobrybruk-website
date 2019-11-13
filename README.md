@@ -2,8 +2,6 @@
 
 Small informative website created for DobryBruk bussines.
 
-------------
-
 ## Table of Contents
 1. [Main](#main)
 2. [General info](#info)
