@@ -15,11 +15,11 @@ const menuItems = [
 const DesktopMenu = ({ isNews }) => {
   return (
     <MenuWrapper>
-      {isNews && (
+      {isNews ? (
         <MenuItem>
           <StyledLink to="/#news">Aktualności</StyledLink>
         </MenuItem>
-      )}
+      ) : null}
       {menuItems.map(item => (
         <MenuItem key={item.name}>
           <StyledLink to={item.slug}>{item.name}</StyledLink>
