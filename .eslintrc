@@ -24,6 +24,7 @@
     "import/prefer-default-export": 0,
     "no-plusplus": [2, { "allowForLoopAfterthoughts": true }],
     "no-nested-ternary": 0,
+    "no-unneeded-ternary": 0,
     "react/jsx-props-no-spreading": 0,
     "react/forbid-prop-types": 0
   },

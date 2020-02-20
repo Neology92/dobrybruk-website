@@ -35,9 +35,8 @@ class GaleriaInspiracji extends Component {
 
       if (filtered.length) {
         return filtered;
-      } else {
-        return photos.edges;
       }
+      return photos.edges;
     };
 
     const filteredPhotos = filterByCategories();

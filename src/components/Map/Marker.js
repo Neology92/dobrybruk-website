@@ -9,7 +9,7 @@ const Marker = ({ text, zoom }) => {
   return (
     <>
       <Pin />
-      <Pulse pulsate={pulsate} />
+      <Pulse />
       {zoom > 15 && <Text>{text}</Text>}
     </>
   );
@@ -56,7 +56,7 @@ const Pulse = styled.div`
     width: 40px;
     position: absolute;
     margin: -13px 0 0 -13px;
-    animation: ${({ pulsate }) => pulsate} 1s ease-out;
+    animation: ${pulsate} 1s ease-out;
     animation-iteration-count: infinite;
     opacity: 0;
     filter: alpha(opacity=0);

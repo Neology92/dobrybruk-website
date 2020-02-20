@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { ThemeProvider } from 'styled-components';
+import { Helmet } from 'react-helmet';
 
 import 'assets/styles/fontsSansation.css';
 
@@ -17,6 +18,18 @@ const MainLayout = ({ children, ...props }) => (
   <>
     <ThemeProvider theme={theme}>
       <>
+        <Helmet>
+          {/* Global site tag (gtag.js) - Google Analytics */}
+          <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=UA-158823669-1"
+          />
+          <script>
+            {`window.dataLayer = window.dataLayer || []; function gtag()
+            {dataLayer.push(arguments)}
+            gtag('js', new Date()); gtag('config', 'UA-158823669-1');`}
+          </script>
+        </Helmet>
         <GlobalStyle />
         <Header {...props} />
         <StyledMain>{children}</StyledMain>
