@@ -33,7 +33,6 @@ const MainLayout = ({ children, ...props }) => (
         </Helmet>
         <GlobalStyle />
         <CookieConsent
-          location="bottom"
           buttonText="Akceptuję"
           flipButtons
           cookieName="gatsby-gdpr-google-analytics"
