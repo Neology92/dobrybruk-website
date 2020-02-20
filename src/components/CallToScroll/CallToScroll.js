@@ -18,7 +18,7 @@ const CallToScroll = styled.div`
     bottom: -20px;
     left: calc(50% - 20px);
 
-    background: ${({ bgColor }) => (bgColor ? bgColor : 'white')};
+    background: ${({ bgColor }) => bgColor || 'white'};
 
     z-index: 9;
   }
@@ -37,8 +37,7 @@ const CallToScroll = styled.div`
       bottom: -40px;
       left: calc(50% - 40px);
 
-      background: ${({ theme, bgColor }) =>
-        bgColor ? bgColor : theme.color.greyL2};
+      background: ${({ theme, bgColor }) => bgColor || theme.color.greyL2};
 
       z-index: 9;
     }
