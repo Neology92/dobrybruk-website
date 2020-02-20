@@ -49,6 +49,20 @@ module.exports = {
       options: { files: ['**/*.js'] },
     },
     {
+      resolve: `gatsby-plugin-gdpr-cookies`,
+      options: {
+        googleAnalytics: {
+          trackingId: 'UA-158823669-1',
+          anonymize: true,
+        },
+        // facebookPixel: {
+        //   pixelId: 'YOUR_FACEBOOK_PIXEL_ID'
+        // },
+        // Defines the environments where the tracking should be available  - default is ["production"]
+        environments: ['production', 'development'],
+      },
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `DobryBruk.pl | Kostka Brukowa IWONA LEGNER`,
