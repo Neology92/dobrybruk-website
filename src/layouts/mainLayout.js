@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { ThemeProvider } from 'styled-components';
 import { Helmet } from 'react-helmet';
-import CookieConsent from 'react-cookie-consent';
 
 import 'assets/styles/fontsSansation.css';
 
@@ -32,23 +31,6 @@ const MainLayout = ({ children, ...props }) => (
           </script>
         </Helmet>
         <GlobalStyle />
-        <CookieConsent
-          buttonText="Akceptuję"
-          flipButtons
-          cookieName="gatsby-gdpr-google-analytics"
-          style={{
-            background: theme.color.darkGreen,
-            color: theme.color.white,
-          }}
-          buttonStyle={{
-            color: theme.color.white,
-            background: theme.color.green,
-            fontSize: '14px',
-            borderRadius: '5px',
-          }}
-        >
-          Używamy ciasteczek, aby polepszyć Twoje doświadczenia!
-        </CookieConsent>
         <Header {...props} />
         <StyledMain>{children}</StyledMain>
         <Footer />
