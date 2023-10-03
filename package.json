@@ -1,9 +1,9 @@
 {
   "name": "dobrybruk-website",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "DobryBruk webpage",
   "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "@Neology92",
   "dependencies": {
     "babel-plugin-styled-components": "^2.1.4",
     "gatsby": "^5.12.5",
