@@ -20,7 +20,7 @@ module.exports = {
         typeName: 'GraphCMS',
         fieldName: 'graphcms',
         url:
-          'https://api-euwest.graphcms.com/v1/cjzo65ee21v7901f68ek4177n/master',
+          'this-url-was-deprecated',
       },
     },
     `gatsby-transformer-sharp`,
@@ -36,13 +36,9 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-eslint',
       options: {
-        test: /\.js$/,
+        extensions: ["js"],
         exclude: /(node_modules|.cache|public)/,
         stages: ['develop'],
-        options: {
-          emitWarning: true,
-          failOnError: false,
-        },
       },
     },
     {
