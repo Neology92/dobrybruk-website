@@ -7,26 +7,20 @@ import { StyledButton } from './styled';
 
 const GallerySection = () => {
   const data = useStaticQuery(graphql`
-    query {
+    {
       photo1: file(relativePath: { eq: "inspirationPhoto1.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1920, quality: 100) {
-            ...GatsbyImageSharpFluid
-          }
+          gatsbyImageData(layout: FULL_WIDTH)
         }
       }
       photo2: file(relativePath: { eq: "inspirationPhoto2.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1920, quality: 100) {
-            ...GatsbyImageSharpFluid
-          }
+          gatsbyImageData(layout: FULL_WIDTH)
         }
       }
       photo3: file(relativePath: { eq: "inspirationPhoto3.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1920, quality: 100) {
-            ...GatsbyImageSharpFluid
-          }
+          gatsbyImageData(layout: FULL_WIDTH)
         }
       }
     }
@@ -78,3 +72,4 @@ const SectionWrapper = styled.section`
 `;
 
 export default GallerySection;
+

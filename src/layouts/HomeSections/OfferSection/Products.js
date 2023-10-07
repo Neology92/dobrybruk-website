@@ -13,64 +13,45 @@ import OfferBlock from './OfferBlock';
 
 const Products = () => {
   const data = useStaticQuery(graphql`
-    query {
+    {
       brickPhoto1: file(relativePath: { eq: "offer/brickPhoto1.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 400, quality: 100) {
-            ...GatsbyImageSharpFluid
-          }
+          gatsbyImageData(width: 400, layout: CONSTRAINED)
         }
       }
       brickPhoto2: file(relativePath: { eq: "offer/brickPhoto2.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 400, quality: 100) {
-            ...GatsbyImageSharpFluid
-          }
+          gatsbyImageData(width: 400, layout: CONSTRAINED)
         }
       }
-
       platePhoto1: file(relativePath: { eq: "offer/platePhoto1.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 400, quality: 100) {
-            ...GatsbyImageSharpFluid
-          }
+          gatsbyImageData(width: 400, layout: CONSTRAINED)
         }
       }
       platePhoto2: file(relativePath: { eq: "offer/platePhoto2.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 400, quality: 100) {
-            ...GatsbyImageSharpFluid
-          }
+          gatsbyImageData(width: 400, layout: CONSTRAINED)
         }
       }
-
       potPhoto1: file(relativePath: { eq: "offer/potPhoto1.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 400, quality: 100) {
-            ...GatsbyImageSharpFluid
-          }
+          gatsbyImageData(width: 400, layout: CONSTRAINED)
         }
       }
       potPhoto2: file(relativePath: { eq: "offer/potPhoto2.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 400, quality: 100) {
-            ...GatsbyImageSharpFluid
-          }
+          gatsbyImageData(width: 400, layout: CONSTRAINED)
         }
       }
-
       aggregatePhoto1: file(relativePath: { eq: "offer/aggregatePhoto1.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 400, quality: 100) {
-            ...GatsbyImageSharpFluid
-          }
+          gatsbyImageData(width: 400, layout: CONSTRAINED)
         }
       }
       aggregatePhoto2: file(relativePath: { eq: "offer/aggregatePhoto2.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 400, quality: 100) {
-            ...GatsbyImageSharpFluid
-          }
+          gatsbyImageData(width: 400, layout: CONSTRAINED)
         }
       }
     }
@@ -83,8 +64,8 @@ const Products = () => {
         <Product
           icon={brick}
           name="Kostka brukowa"
-          photo1={data.brickPhoto1.childImageSharp.fluid}
-          photo2={data.brickPhoto2.childImageSharp.fluid}
+          photo1={data.brickPhoto1.childImageSharp.gatsbyImageData}
+          photo2={data.brickPhoto2.childImageSharp.gatsbyImageData}
         >
           <p>
             Pełny katalog znajdziesz <br /> na stronie <span>Semmelrock:</span>
@@ -101,8 +82,8 @@ const Products = () => {
         <Product
           icon={plate}
           name="Płyty tarasowe"
-          photo1={data.platePhoto1.childImageSharp.fluid}
-          photo2={data.platePhoto2.childImageSharp.fluid}
+          photo1={data.platePhoto1.childImageSharp.gatsbyImageData}
+          photo2={data.platePhoto2.childImageSharp.gatsbyImageData}
         >
           <p>
             Pełny katalog znajdziesz <br /> na stronie <span>Semmelrock:</span>
@@ -119,8 +100,8 @@ const Products = () => {
         <Product
           icon={aggregate}
           name="Kruszywa, kamienie"
-          photo1={data.aggregatePhoto1.childImageSharp.fluid}
-          photo2={data.aggregatePhoto2.childImageSharp.fluid}
+          photo1={data.aggregatePhoto1.childImageSharp.gatsbyImageData}
+          photo2={data.aggregatePhoto2.childImageSharp.gatsbyImageData}
         >
           <ul>
             <li>Grysy</li>
@@ -136,8 +117,8 @@ const Products = () => {
         <Product
           icon={pot}
           name="Dodatki ogrodowe"
-          photo1={data.potPhoto1.childImageSharp.fluid}
-          photo2={data.potPhoto2.childImageSharp.fluid}
+          photo1={data.potPhoto1.childImageSharp.gatsbyImageData}
+          photo2={data.potPhoto2.childImageSharp.gatsbyImageData}
         >
           <ul>
             <li>Donice ogrodowe</li>
@@ -153,3 +134,4 @@ const Products = () => {
 };
 
 export default Products;
+

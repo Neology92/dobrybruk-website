@@ -1,7 +1,7 @@
-import Img from 'gatsby-image';
+import { GatsbyImage } from "gatsby-plugin-image";
 import styled from 'styled-components';
 
-const StyledImg = styled(Img)`
+const StyledImg = styled(GatsbyImage)`
   margin: 25px 0 5px 0;
   width: 75%;
 

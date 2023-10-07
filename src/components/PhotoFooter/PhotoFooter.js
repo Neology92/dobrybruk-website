@@ -1,49 +1,39 @@
 import React from 'react';
-import Img from 'gatsby-image';
+import { GatsbyImage } from "gatsby-plugin-image";
 import { useStaticQuery, graphql } from 'gatsby';
 
 import styled from 'styled-components';
 
 const PhotoFooter = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      footerImage1: file(relativePath: { eq: "footerImage1.jpg" }) {
-        childImageSharp {
-          fixed(height: 290) {
-            ...GatsbyImageSharpFixed
-          }
-        }
-      }
-      footerImage2: file(relativePath: { eq: "footerImage2.jpg" }) {
-        childImageSharp {
-          fixed(height: 290) {
-            ...GatsbyImageSharpFixed
-          }
-        }
-      }
-      footerImage3: file(relativePath: { eq: "footerImage3.jpg" }) {
-        childImageSharp {
-          fixed(height: 290) {
-            ...GatsbyImageSharpFixed
-          }
-        }
-      }
-      footerImage4: file(relativePath: { eq: "footerImage4.jpg" }) {
-        childImageSharp {
-          fixed(height: 290) {
-            ...GatsbyImageSharpFixed
-          }
-        }
-      }
+  const data = useStaticQuery(graphql`{
+  footerImage1: file(relativePath: {eq: "footerImage1.jpg"}) {
+    childImageSharp {
+      gatsbyImageData(height: 290, layout: FIXED)
     }
-  `);
+  }
+  footerImage2: file(relativePath: {eq: "footerImage2.jpg"}) {
+    childImageSharp {
+      gatsbyImageData(height: 290, layout: FIXED)
+    }
+  }
+  footerImage3: file(relativePath: {eq: "footerImage3.jpg"}) {
+    childImageSharp {
+      gatsbyImageData(height: 290, layout: FIXED)
+    }
+  }
+  footerImage4: file(relativePath: {eq: "footerImage4.jpg"}) {
+    childImageSharp {
+      gatsbyImageData(height: 290, layout: FIXED)
+    }
+  }
+}`);
 
   return (
     <Wrapper>
-      <Img fixed={data.footerImage1.childImageSharp.fixed} />
-      <Img fixed={data.footerImage2.childImageSharp.fixed} />
-      <Img fixed={data.footerImage3.childImageSharp.fixed} />
-      <Img fixed={data.footerImage4.childImageSharp.fixed} />
+      <GatsbyImage image={data.footerImage1.childImageSharp.gatsbyImageData} />
+      <GatsbyImage image={data.footerImage2.childImageSharp.gatsbyImageData} />
+      <GatsbyImage image={data.footerImage3.childImageSharp.gatsbyImageData} />
+      <GatsbyImage image={data.footerImage4.childImageSharp.gatsbyImageData} />
     </Wrapper>
   );
 };

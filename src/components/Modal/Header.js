@@ -1,5 +1,5 @@
 import React from 'react';
-import Img from 'gatsby-image';
+import { GatsbyImage } from "gatsby-plugin-image";
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
@@ -7,11 +7,11 @@ const Header = ({ name, photo1, photo2, setIsModalOpen }) => {
   return (
     <Wrapper>
       <div>
-        <Img fluid={photo1} />
+        <GatsbyImage image={photo1} />
       </div>
 
       <div>
-        <Img fluid={photo2} />
+        <GatsbyImage image={photo2} />
       </div>
       <Title>{name}</Title>
       <CloseButton

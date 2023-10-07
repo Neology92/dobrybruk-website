@@ -1,16 +1,14 @@
 import React from 'react';
-import Img from 'gatsby-image';
+import { GatsbyImage } from 'gatsby-plugin-image';
 import { useStaticQuery, graphql } from 'gatsby';
 import styled from 'styled-components';
 
 const HeroImage = () => {
   const data = useStaticQuery(graphql`
-    query {
+    {
       file(relativePath: { eq: "heroImage.png" }) {
         childImageSharp {
-          fluid(maxWidth: 583, quality: 100) {
-            ...GatsbyImageSharpFluid_noBase64
-          }
+          gatsbyImageData(width: 583, placeholder: NONE, layout: CONSTRAINED)
         }
       }
     }
@@ -20,7 +18,7 @@ const HeroImage = () => {
 
   return (
     <Wrapper>
-      <Img fluid={data.file.childImageSharp.fluid} />
+      <GatsbyImage image={data.file.childImageSharp.gatsbyImageData} />
     </Wrapper>
   );
 };
@@ -49,3 +47,4 @@ const Wrapper = styled.div`
 `;
 
 export default HeroImage;
+

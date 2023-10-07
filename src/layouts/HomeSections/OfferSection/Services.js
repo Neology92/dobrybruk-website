@@ -12,34 +12,25 @@ import OfferBlock from './OfferBlock';
 
 const Services = () => {
   const data = useStaticQuery(graphql`
-    query {
+    {
       truckPhoto1: file(relativePath: { eq: "offer/truckPhoto1.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 400, quality: 100) {
-            ...GatsbyImageSharpFluid
-          }
+          gatsbyImageData(width: 400, layout: CONSTRAINED)
         }
       }
       truckPhoto2: file(relativePath: { eq: "offer/truckPhoto2.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 400, quality: 100) {
-            ...GatsbyImageSharpFluid
-          }
+          gatsbyImageData(width: 400, layout: CONSTRAINED)
         }
       }
-
       pavingPhoto1: file(relativePath: { eq: "offer/pavingPhoto1.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 400, quality: 100) {
-            ...GatsbyImageSharpFluid
-          }
+          gatsbyImageData(width: 400, layout: CONSTRAINED)
         }
       }
       pavingPhoto2: file(relativePath: { eq: "offer/pavingPhoto2.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 400, quality: 100) {
-            ...GatsbyImageSharpFluid
-          }
+          gatsbyImageData(width: 400, layout: CONSTRAINED)
         }
       }
     }
@@ -52,16 +43,16 @@ const Services = () => {
         <Product
           icon={truck}
           name="Transport HDS"
-          photo1={data.truckPhoto1.childImageSharp.fluid}
-          photo2={data.truckPhoto2.childImageSharp.fluid}
+          photo1={data.truckPhoto1.childImageSharp.gatsbyImageData}
+          photo2={data.truckPhoto2.childImageSharp.gatsbyImageData}
         >
           <p>Wycena indywidualna</p>
         </Product>
         <Product
           icon={paving}
           name="Brukarstwo"
-          photo1={data.pavingPhoto1.childImageSharp.fluid}
-          photo2={data.pavingPhoto2.childImageSharp.fluid}
+          photo1={data.pavingPhoto1.childImageSharp.gatsbyImageData}
+          photo2={data.pavingPhoto2.childImageSharp.gatsbyImageData}
         >
           <p>Wycena indywidualna</p>
         </Product>

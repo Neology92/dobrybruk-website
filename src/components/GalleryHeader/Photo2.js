@@ -1,21 +1,24 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-import Img from 'gatsby-image';
+import { GatsbyImage } from 'gatsby-plugin-image';
 
 const Photo2 = () => {
   const data = useStaticQuery(graphql`
-    query {
+    {
       file(relativePath: { eq: "galleryHeaderPhoto2.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 541, quality: 100) {
-            ...GatsbyImageSharpFluid_tracedSVG
-          }
+          gatsbyImageData(
+            width: 541
+            placeholder: TRACED_SVG
+            layout: CONSTRAINED
+          )
         }
       }
     }
   `);
 
-  return <Img fluid={data.file.childImageSharp.fluid} />;
+  return <GatsbyImage image={data.file.childImageSharp.gatsbyImageData} />;
 };
 
 export default Photo2;
+

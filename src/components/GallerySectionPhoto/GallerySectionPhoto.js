@@ -8,7 +8,7 @@ import { StyledImg } from './styled';
 const GallerySectionPhoto = ({ children, image, isLeft }) => (
   <Wrapper isLeft={isLeft}>
     <div>{children}</div>
-    <StyledImg fluid={image.childImageSharp.fluid} isLeft={isLeft} />
+    <StyledImg image={image.childImageSharp.gatsbyImageData} isLeft={isLeft} />
   </Wrapper>
 );
 
@@ -66,3 +66,4 @@ GallerySectionPhoto.defaultProps = {
 };
 
 export default GallerySectionPhoto;
+
