@@ -8,7 +8,7 @@ import { StyledLink } from './styled';
 
 const menuItems = [
   { name: 'Home', slug: '/#home' },
-  { name: 'Galeria', slug: '/galeria-inspiracji' },
+  // { name: 'Galeria', slug: '/galeria-inspiracji' },
   { name: 'Kontakt', slug: '/#kontakt' },
   { name: 'Oferta', slug: '/#oferta' },
 ];

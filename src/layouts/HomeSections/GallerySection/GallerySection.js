@@ -42,9 +42,9 @@ const GallerySection = () => {
       </GallerySectionPhoto>
       <GallerySectionPhoto image={data.photo3}>
         Zajrzyj do naszej galerii
-        <StyledButton to="/galeria-inspiracji" isWhite>
+        {/* <StyledButton to="/galeria-inspiracji" isWhite>
           Zobacz więcej
-        </StyledButton>
+        </StyledButton> */}
       </GallerySectionPhoto>
     </SectionWrapper>
   );
