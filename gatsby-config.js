@@ -25,14 +25,6 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-eslint',
-      options: {
-        extensions: ['js'],
-        exclude: ['node_modules', '.cache', 'public'],
-        stages: ['develop'],
-      },
-    },
-    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `DobryBruk.pl | Kostka Brukowa IWONA LEGNER`,
