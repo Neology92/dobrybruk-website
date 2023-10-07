@@ -14,15 +14,6 @@ module.exports = {
         path: `${__dirname}/src/assets/images`,
       },
     },
-    {
-      resolve: 'gatsby-source-graphql',
-      options: {
-        typeName: 'GraphCMS',
-        fieldName: 'graphcms',
-        url:
-          'this-url-was-deprecated',
-      },
-    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-resolve-src`, // Allows to use absolute path
@@ -36,8 +27,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-eslint',
       options: {
-        extensions: ["js"],
-        exclude: /(node_modules|.cache|public)/,
+        extensions: ['js'],
+        exclude: ['node_modules', '.cache', 'public'],
         stages: ['develop'],
       },
     },
@@ -58,3 +49,4 @@ module.exports = {
     // `gatsby-plugin-offline`,
   ],
 };
+
