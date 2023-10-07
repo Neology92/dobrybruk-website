@@ -53,18 +53,20 @@ const Square = styled.div`
   top: -10px;
   left: -110px;
 
-  ::before {
+  &::before {
     content: '';
     width: 150px;
     height: 100px;
     transform: rotate(-45deg);
+    display: block;
 
     background: ${({ theme }) => theme.color.green};
 
-    position: absolute;
+    position: relative;
     top: -40px;
     left: -19px;
   }
 `;
 
 export default Decorations;
+
