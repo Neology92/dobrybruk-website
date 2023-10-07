@@ -5,7 +5,7 @@ import {
   MainLayout,
   HeroSection,
   OfferSection,
-  NewsSection,
+  // NewsSection,
   GallerySection,
   ContactSection,
 } from 'layouts';
@@ -16,7 +16,7 @@ const IndexPage = ({}) => (
     <SEO title="Home" />
     <HeroSection />
     <OfferSection />
-    <NewsSection edges={{}} />
+    {/* <NewsSection edges={{}} /> */}
     <GallerySection />
     <ContactSection />
     <PhotoFooter />

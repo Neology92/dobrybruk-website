@@ -56,7 +56,7 @@ const LeftWrapper = styled.div`
     width: 37.5%;
   }
 
-  ${({ theme }) => theme.media.above.l} {
+  ${({ theme }) => theme.media.above.xl} {
     width: 30%;
   }
 `;
@@ -65,10 +65,6 @@ const RightWrapper = styled.div`
   width: 100%;
   ${({ theme }) => theme.media.above.m} {
     width: 50%;
-  }
-
-  ${({ theme }) => theme.media.above.l} {
-    width: 62.5%;
   }
 
   ${({ theme }) => theme.media.above.l} {
@@ -92,3 +88,4 @@ const ProductsWrapper = styled.div`
 `;
 
 export default OfferSection;
+

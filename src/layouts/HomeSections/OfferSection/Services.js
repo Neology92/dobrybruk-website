@@ -96,12 +96,7 @@ const Wrapper = styled.div`
       padding-right: 5vw;
     }
   }
-
-  ${({ theme }) => theme.media.above.xxl} {
-    & > div {
-      padding-right: 10vw;
-    }
-  }
 `;
 
 export default Services;
+
