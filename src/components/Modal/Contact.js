@@ -11,7 +11,7 @@ const Contact = () => {
       <InfoSection>
         <h1>W punkcie sprzedaży:</h1>
         <h2>
-          Karwiniec 22c <br /> 56-420 Bierutów
+          Karwiniec 22b <br /> 56-420 Bierutów
         </h2>
       </InfoSection>
       <InfoSection>
@@ -74,3 +74,4 @@ const InfoSection = styled.address`
 `;
 
 export default Contact;
+

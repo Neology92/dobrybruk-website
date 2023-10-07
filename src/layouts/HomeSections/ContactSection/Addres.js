@@ -13,7 +13,7 @@ const Addres = () => (
     />
     <InnerWrapper>
       <Icon src={pin} />
-      <div>Karwiniec 22c</div>
+      <div>Karwiniec 22b</div>
       <div>56-420 Bierutów</div>
       <StyledButton
         to="https://www.google.com/maps/place/DobryBruk.pl+%7C+Kostka+Brukowa+IWONA+LEGNER/@51.112427,17.5389322,17z/data=!3m1!4b1!4m5!3m4!1s0x4710196655d3496d:0x6ca99ccf33df16a6!8m2!3d51.112427!4d17.5411209"
@@ -83,3 +83,4 @@ const InnerWrapper = styled.div`
 `;
 
 export default Addres;
+
