@@ -8,11 +8,7 @@ const OfferImage = () => {
     {
       file(relativePath: { eq: "offerSectionImage.jpg" }) {
         childImageSharp {
-          gatsbyImageData(
-            width: 532
-            placeholder: TRACED_SVG
-            layout: CONSTRAINED
-          )
+          gatsbyImageData(width: 532, layout: CONSTRAINED)
         }
       }
     }

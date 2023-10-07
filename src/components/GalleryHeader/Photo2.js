@@ -7,11 +7,7 @@ const Photo2 = () => {
     {
       file(relativePath: { eq: "galleryHeaderPhoto2.jpg" }) {
         childImageSharp {
-          gatsbyImageData(
-            width: 541
-            placeholder: TRACED_SVG
-            layout: CONSTRAINED
-          )
+          gatsbyImageData(width: 541, layout: CONSTRAINED)
         }
       }
     }
