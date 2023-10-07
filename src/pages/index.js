@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import { graphql } from 'gatsby';
 
 import {
   MainLayout,
@@ -12,7 +11,7 @@ import {
 } from 'layouts';
 import { SEO, PhotoFooter } from 'components';
 
-const IndexPage = ({  }) => (
+const IndexPage = ({}) => (
   <MainLayout isNews={false}>
     <SEO title="Home" />
     <HeroSection />
@@ -24,29 +23,9 @@ const IndexPage = ({  }) => (
   </MainLayout>
 );
 
-// export const infoQuery = graphql`
-//   query {
-//     graphcms {
-//       newses: newsesConnection(
-//         orderBy: createdAt_DESC
-//         where: { status: PUBLISHED }
-//       ) {
-//         edges {
-//           node {
-//             status
-//             updatedAt
-//             createdAt
-//             id
-//             info
-//           }
-//         }
-//       }
-//     }
-//   }
-// `;
-
 IndexPage.propTypes = {
   data: PropTypes.object.isRequired,
 };
 
 export default IndexPage;
+
